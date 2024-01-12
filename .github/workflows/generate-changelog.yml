@@ -49,8 +49,8 @@ jobs:
           stripGeneratorNotice: true
           verbose: true
           base: 'HISTORY.md'
-          releaseUrl: 'https://github.com/Ghost-Hackers/sph-file-cleanup/releases'
-          githubSite: 'https://github.com/Ghost-Hackers/sph-file-cleanup'
+          releaseUrl: 'https://github.com/Ghost-Hackers/sph-report-cleanup/releases'
+          githubSite: 'https://github.com/Ghost-Hackers/sph-report-cleanup'
 
       - name: Commit files
         env:
