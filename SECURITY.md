@@ -1,4 +1,4 @@
-# <p align="center">Security Policy</p>
+> # <p align="center">Security Policy</p>
 ## Supported Versions
 
 Currently we only support the latest version. Previous versions are not recommended to be used. We will update this section as we release new versions.

@@ -20,7 +20,7 @@ If you want to contribute code, fork the repository and create a pull request wi
 
 > ## Code Style
 
-Please adhere to the coding standards and style conventions used in the project. Refer to our [style guide](/docs/guides/style-guide.md) for more details.
+Please adhere to the coding standards and style conventions used in the project. Refer to our [style guide](/docs/guides/ethereal-style-codex.md) for more details.
 
 > ## Code Review
 
