@@ -45,6 +45,7 @@ jobs:
           prWoLabels: true
           author: true
           unreleased: true
+          unreleasedLabel: '### 🚧 Unreleased'
           compareLink: true
           stripGeneratorNotice: true
           verbose: true
