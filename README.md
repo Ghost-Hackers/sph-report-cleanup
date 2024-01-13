@@ -23,7 +23,7 @@
     </br>
 </p>
 
-# SPH Report Cleanup
+> # SPH Report Cleanup
 
 [![Greetings](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/greetings.yml/badge.svg)](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/greetings.yml)
 [![Generate Changelog](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/generate-changelog.yml/badge.svg)](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/generate-changelog.yml)
@@ -31,6 +31,76 @@
 **SPH Report Cleanup** is a Batch script designed to search for and clean up [Synxis Property Hub (SPH)](https://www.sabrehospitality.com/solutions/property-hub/) reports from the workstation's "Downloads" folder. This script features several enhancements for user convenience. It keeps itself and its dependencies up-to-date, ensuring a seamless experience.
 
 The script employs a PowerShell script to find and delete SPH PDF files based on the predetermined search format: **"sph*.pdf"**. This specific format is chosen to safeguard against unintended deletion of non-SPH files. The script's sole purpose is to clean up residual report files in the "Downloads" folder, enhancing system hygiene.
+
+<details>
+  <summary>Examples of SPH Reports Looked For</summary>
+  <!-- Include examples or details of the SPH reports the script looks for. -->
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphCashierClosing.jpg" alt="Cashier Closing">
+    <div class="image-overlay">Cashier Closing</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphCreditCardTransactionTotal.jpg" alt="Credit Card Transaction Total">
+    <div class="image-overlay">Credit Card Transaction Total</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphHotelLedger.jpg" alt="Hotel Ledger">
+    <div class="image-overlay">Hotel Ledger</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphStandardGuestList.jpg" alt="Standard Guest List">
+    <div class="image-overlay">Standard Guest List</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphStatistics.jpg" alt="Statistics Report">
+    <div class="image-overlay">Statistics Report</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphTransactionTotalDetail.jpg" alt="Transaction Total Detail">
+    <div class="image-overlay">Transaction Total Detail</div>
+  </div>
+
+  <div class="image-container">
+    <img src="/assets/images/redacted-pdfs/sphTransactionTotalSummary.jpg" alt="Transaction Total Summary">
+    <div class="image-overlay">Transaction Total Summary</div>
+  </div>
+
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .image-container img {
+      width: 200px; /* Adjust the width as needed */
+      border: 1px solid #ddd; /* Optional: Add a border */
+      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+      color: #fff; /* Adjust the text color */
+      padding: 10px;
+      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    }
+
+    .image-container:hover .image-overlay {
+      opacity: 1;
+    }
+  </style>
+</details>
 
 ## Table of Contents
 
@@ -40,21 +110,23 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
 - [What To Expect When Running The Script](#what-to-expect-when-running-the-script)
 - [FAQ](#faq)
 - [Repository Information](#repository-information)
-  - [Changelog](#changelog)
   - [Recent Issues](#recent-issues)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [License](#license)
 - [Contact](#contact)
 
-## Getting Started
+> ## Getting Started
 
 ### Downloading
 
-To begin using **SPH Report Cleanup**, download the [latest release](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/download/v1.2.0/SPH.Report.Cleanup.bat). The script is a standalone Batch file; no additional downloads are required. The script will handle the installation of necessary dependencies automatically upon execution.
+To begin using **SPH Report Cleanup**, download the [latest release](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/download/v0.1.0/SPH.Report.Cleanup.bat). The script is a standalone Batch file; no additional downloads are required. The script will handle the installation of necessary dependencies automatically upon execution.
 
 ### Installing
 
 There is no installation process. The script will reside in the user's "Downloads" folder. While the script can be run from any location on the user's machine, it is recommended to move it to the desktop for easy access. The script creates a desktop shortcut with every run, ensuring an always up-to-date link.
 
-## What To Expect When Running The Script
+> ## What To Expect When Running The Script
 
 Upon running the script, it will perform the following tasks:
 
@@ -65,9 +137,7 @@ Upon running the script, it will perform the following tasks:
 - Check for updates
   - Download and install the latest version of the script and its dependencies, if available.
 - Display a progress bar
-  - Visualize the search for files matching the **"sph*.
-
-pdf"** format.
+  - Visualize the search for files matching the **"sph*.pdf"** format.
 - List files to be deleted
   - Provide a preview of files targeted for deletion.
 - Confirm file deletion
@@ -79,12 +149,7 @@ pdf"** format.
 - Terminate the script
   - Exit after prompting the user to press any key.
 
-<details>
-  <summary>Examples of SPH Reports Looked For</summary>
-  <!-- Include examples or details of the SPH reports the script looks for. -->
-</details>
-
-## FAQ
+> ## FAQ
 
 1. **Why does the script need to be run manually?**
    - The script is designed for user-initiated execution and is not intended for automatic runs.
@@ -119,15 +184,13 @@ pdf"** format.
 11. **Desktop run recommendation?**
     - Convenience feature; script can run from any location, but desktop placement is advised.
 
-## Repository Information
+> ## Repository Information
 
-<p align="center">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> 
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> 
   <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=green"> 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=yellow">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/latest/total?style=plastic&color=white">
-</p>
 
 <details>
   <summary>Commits</summary>
@@ -149,16 +212,17 @@ pdf"** format.
   <!-- Include download-related badges or information by version. -->
   <strong>V1.0 Downloads</strong> <sup>[*Ongoing*]</sup> </br>
     <img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/v1.0.0/total?style=social">
+  </br>
+  <strong>V0.1 Downloads</strong> <sup>[*Discontinued*]</sup> </br>
+    <img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/v0.1.0/total?style=social">
 </details>
 
-### Recent Issues
+### Recent Issue(s)
 
-<p align="center">
   <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/Ghost-Hackers/sph-report-cleanup?style=plastic&color=vividgreen"> 
   <img alt="GitHub open issues" src="https://img.shields.io/github/issues/Ghost-Hackers/sph-report-cleanup?style=plastic&color=red" />
   <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Abug&style=plastic&label=bugs&color=orange"> 
   <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Aenhancement&style=plastic&label=feature%20requests&color=yellow">
-</p>
 
 Currently there are no recent issues. If you have an issue, please open one and let us know so we can fix it.
 <!-- 
@@ -166,73 +230,19 @@ Currently there are no recent issues. If you have an issue, please open one and 
     - [:white_check_mark:] #2
 -->
 
+> ## Changelog
+
+For a detailed changelog, please refer to the [CHANGELOG.md](CHANGELOG.md) file. It contains information about every release, including notable changes, bug fixes, and new features. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). The latest release is [v0.1.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0). The latest pre-release is [v1.0.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v1.0.0).
+
+> ## Contributing
+
+Contributions are what make the open-source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly appreciated**. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to contribute. The process for submitting pull requests is described in [GitHub Help](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request). Please refer to the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file for our code of conduct. We welcome all contributions, including but not limited to the following: reporting issues, contributing code, submitting pull requests, identifying bugs, proposing new features, and creating suggestions. When contributing to this repository, please follow the [Ethereal Style Codex](/docs/guides/ethereal-style-codex.md) and the [Ethereal Documentation Codex](/docs/guides/ethereal-documentation-codex.md).
+
+> ## License
+
+This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details. The license is also available [online](https://www.gnu.org/licenses/agpl-3.0.en.html). The license is based on the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/). It is a copyleft license that requires anyone who distributes our code or a derivative work to make the source available under the same terms, and also provides an express grant of patent rights from contributors to users. It is compatible with the GNU GPL, but not with the GNU LGPL. The license is designed specifically to ensure that, if you make changes to this code and distribute the resulting executable, you must release your changes under the same license. It ensures that the user of a program that includes this code can download the source freely and modify it freely. It also ensures that the user can know what license the code is released under, and can use that code in other projects.
+
 > ## Contact
 
 - Please use the [Issues](https://github.com/Ghost-Hackers/sph-report-cleanup/issues) tab to report any issues, bugs, or enhancements (feature requests)
 - You may email us at [Ghost Hackers](mailto:ghost-hackers@outlook.com) for any other inquiries
-
-<!--
-    Example README.md
-    # Project Title
-
-A brief description of what this project does and who it's for
-
-## Table of Contents
-
-- Project Title
-  - Table of Contents
-  - About The Project
-  - Getting Started
-    - Prerequisites
-    - Installation
-  - Usage
-  - Roadmap
-  - Contributing
-  - License
-  - Contact
-  - Acknowledgements
-
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here you can provide a brief description of what your project is about and what it does. You can also include a screenshot of your project.
-
-## Getting Started
-
-Here you can provide instructions on how to get started with your project. You can include prerequisites, installation instructions, etc.
-
-### Prerequisites
-
-Here you can list the prerequisites for your project.
-
-### Installation
-
-Here you can provide detailed installation instructions for your project.
-
-## Usage
-
-Here you can describe how to use your project.
-
-## Roadmap
-
-Here you can list the future features you plan to add to your project.
-
-## Contributing
-
-Here you can describe how other developers can contribute to your project.
-
-## License
-
-Here you can specify the license for your project.
-
-## Contact
-
-Here you can provide your contact information.
-
-## Acknowledgements
-
-Here you can acknowledge any contributors, libraries, or other resources that you used in your project.
-
-
--->
