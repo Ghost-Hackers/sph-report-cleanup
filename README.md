@@ -144,11 +144,7 @@ Upon running the script, it will perform the following tasks:
 
 > ## Repository Information
 
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> 
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> 
-  <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=green"> 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=yellow">
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/latest/total?style=plastic&color=white">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=green"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=yellow"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/latest/total?style=plastic&color=white">
 
 <details>
   <summary>Commits</summary>
@@ -177,10 +173,7 @@ Upon running the script, it will perform the following tasks:
 
 ### Recent Issue(s)
 
-  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/Ghost-Hackers/sph-report-cleanup?style=plastic&color=vividgreen"> 
-  <img alt="GitHub open issues" src="https://img.shields.io/github/issues/Ghost-Hackers/sph-report-cleanup?style=plastic&color=red" />
-  <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Abug&style=plastic&label=bugs&color=orange"> 
-  <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Aenhancement&style=plastic&label=feature%20requests&color=yellow">
+<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/Ghost-Hackers/sph-report-cleanup?style=plastic&color=vividgreen"> <img alt="GitHub open issues" src="https://img.shields.io/github/issues/Ghost-Hackers/sph-report-cleanup?style=plastic&color=red" /> <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Abug&style=plastic&label=bugs&color=orange"> <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Aenhancement&style=plastic&label=feature%20requests&color=yellow">
 
 Currently there are no recent issues. If you have an issue, please open one and let us know so we can fix it.
 <!-- 
