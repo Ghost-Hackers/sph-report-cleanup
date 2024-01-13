@@ -35,38 +35,39 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
 <details>
   <summary>Examples of SPH Reports Looked For</summary>
   <!-- Include examples or details of the SPH reports the script looks for. -->
+
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphCashierClosing.jpg" alt="Cashier Closing">
+    <img src="/assets/images/redacted pdfs/sphCashierClosing.jpg" alt="Cashier Closing">
     <div class="image-overlay">Cashier Closing</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphCreditCardTransactionTotal.jpg" alt="Credit Card Transaction Total">
+    <img src="/assets/images/redacted pdfs/sphCreditCardTransactionTotal.jpg" alt="Credit Card Transaction Total">
     <div class="image-overlay">Credit Card Transaction Total</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphHotelLedger.jpg" alt="Hotel Ledger">
+    <img src="/assets/images/redacted pdfs/sphHotelLedger.jpg" alt="Hotel Ledger">
     <div class="image-overlay">Hotel Ledger</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphStandardGuestList.jpg" alt="Standard Guest List">
+    <img src="/assets/images/redacted pdfs/sphStandardGuestList.jpg" alt="Standard Guest List">
     <div class="image-overlay">Standard Guest List</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphStatistics.jpg" alt="Statistics Report">
+    <img src="/assets/images/redacted pdfs/sphStatistics.jpg" alt="Statistics Report">
     <div class="image-overlay">Statistics Report</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphTransactionTotalDetail.jpg" alt="Transaction Total Detail">
+    <img src="/assets/images/redacted pdfs/sphTransactionTotalDetail.jpg" alt="Transaction Total Detail">
     <div class="image-overlay">Transaction Total Detail</div>
   </div>
 
   <div class="image-container">
-    <img src="/assets/images/redacted-pdfs/sphTransactionTotalSummary.jpg" alt="Transaction Total Summary">
+    <img src="/assets/images/redacted pdfs/sphTransactionTotalSummary.jpg" alt="Transaction Total Summary">
     <div class="image-overlay">Transaction Total Summary</div>
   </div>
 
@@ -100,6 +101,7 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
       opacity: 1;
     }
   </style>
+
 </details>
 
 ## Table of Contents
