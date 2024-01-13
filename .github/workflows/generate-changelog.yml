@@ -37,6 +37,7 @@ jobs:
           securityLabel: '### 🛡️ Security'
           issuesLabel: '### 📁 Other issues'
           prLabel: '### 📁 Other pull requests'
+          unreleasedLabel: '### 🚧 Unreleased'
           addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
           issues: true
           issuesWoLabels: true
@@ -45,13 +46,10 @@ jobs:
           prWoLabels: true
           author: true
           unreleased: true
-          unreleasedLabel: '### 🚧 Unreleased'
           compareLink: true
           stripGeneratorNotice: true
           verbose: true
           base: 'HISTORY.md'
-          releaseUrl: 'https://github.com/Ghost-Hackers/sph-report-cleanup/releases'
-          githubSite: 'https://github.com/Ghost-Hackers/sph-report-cleanup'
 
       - name: Commit files
         env:
