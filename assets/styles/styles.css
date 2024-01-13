@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: black; /* Set the background color of the entire page */
+    color: white; /* Set the default text color */
+}
+
+/* Centered content */
+#center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Custom message box */
+#customMessageBox {
+    background-color: black; /* Set the background color of the message box */
+    color: white; /* Set the text color of the message box */
+    border: 2px solid white; /* Set the border color of the message box */
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
