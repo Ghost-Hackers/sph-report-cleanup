@@ -36,25 +36,25 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
   <summary>Examples of SPH Reports Looked For</summary>
   <!-- Include examples or details of the SPH reports the script looks for. -->
 
-  - <img src="/assets/images/redacted%20pdfs/sphCashierClosing.jpg" alt="Cashier Closing" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphCashierClosing.jpg" alt="Cashier Closing" style="width: 40%;" /> </br>
     - *Cashier Closing*
   
-  - <img src="/assets/images/redacted%20pdfs/sphCreditCardTransactionTotal.jpg" alt="Credit Card Transaction Total" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphCreditCardTransactionTotal.jpg" alt="Credit Card Transaction Total" style="width: 40%;" /> </br>
     - *Credit Card Transaction Total*
   
-  - <img src="/assets/images/redacted%20pdfs/sphHotelLedger.jpg" alt="Hotel Ledger" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphHotelLedger.jpg" alt="Hotel Ledger" style="width: 40%;" /> </br>
     - *Hotel Ledger*
   
-  - <img src="/assets/images/redacted%20pdfs/sphStandardGuestList.jpg" alt="Standard Guest List" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphStandardGuestList.jpg" alt="Standard Guest List" style="width: 40%;" /> </br>
     - *Standard Guest List*
   
-  - <img src="/assets/images/redacted%20pdfs/sphStatistics.jpg" alt="Statistics Report" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphStatistics.jpg" alt="Statistics Report" style="width: 40%;" /> </br>
     - *Statistics Report*
   
-  - <img src="/assets/images/redacted%20pdfs/sphTransactionTotalDetail.jpg" alt="Transaction Total Detail" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphTransactionTotalDetail.jpg" alt="Transaction Total Detail" style="width: 40%;" /> </br>
     - *Transaction Total Detail*
   
-  - <img src="/assets/images/redacted%20pdfs/sphTransactionTotalSummary.jpg" alt="Transaction Total Summary" style="width: 40%;" />
+  <img src="/assets/images/redacted%20pdfs/sphTransactionTotalSummary.jpg" alt="Transaction Total Summary" style="width: 40%;" /> </br>
     - *Transaction Total Summary*
 
 </details>
