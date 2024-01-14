@@ -1,4 +1,4 @@
-# 📑 Changelog
+> # :book: Changelog
 
 ## [Unreleased](https://github.com/Ghost-Hackers/sph-report-cleanup/releases) (2024-01-13)
 
@@ -27,3 +27,5 @@
 
 ### Fixed
 - N/A
+
+
