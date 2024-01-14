@@ -1,71 +1,73 @@
-name: Changelog
-
-on:
-  push:
-    branches:
-      - master  # Adjust this to your main branch
+  name: Changelog
   
-  pull_request:
-    types: [closed]
-
-  release:
-    types: [published]
-
-  issues:
-    types: [closed, edited]
-
-jobs:
-  generate-changelog:
-    runs-on: ubuntu-latest
-    name: Generate changelog for master branch
-
-    steps:
-      - name: "📥 Check-out"
-        uses: actions/checkout@v4.1.1
-      
-      - name: "✏️ Generate full changelog"
-        id: generate-full-changelog
-        uses: heinrichreimer/action-github-changelog-generator@v2.4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          headerLabel: "# 📑 Changelog"
-          breakingLabel: '### 💥 Breaking'
-          enhancementLabel: '### 🚀 Enhancements'
-          bugsLabel: '### 🐛 Bug fixes'
-          deprecatedLabel: '### ⚠️ Deprecations'
-          removedLabel: '### 🔥 Removals'
-          securityLabel: '### 🛡️ Security'
-          issuesLabel: '### 📁 Other issues'
-          prLabel: '### 📁 Other pull requests'
-          unreleasedLabel: '### 🚧 Unreleased'
-          addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
-          issues: true
-          issuesWoLabels: true
-          issueLineLabels: ALL
-          pullRequests: true
-          prWoLabels: true
-          author: true
-          unreleased: true
-          compareLink: true
-          stripGeneratorNotice: true
-          verbose: true
-          base: HISTORY.md
-          releaseUrl: https://github.com/Ghost-Hackers/sph-report-cleanup/releases
-          githubSite: https://github.com/Ghost-Hackers/sph-report-cleanup
-
-      - name: Commit files
-        env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_EMAIL: ${{ secrets.YOUR_GITHUB_EMAIL }}
-        run: |
-          git config --local user.email "$CI_EMAIL"
-          git config --local user.name "$CI_USER"
-          git diff --exit-code --quiet || (git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo "push=true" >> $GITHUB_ENV || echo "No changes to CHANGELOG.md")
-
-      - name: Push changes
-        if: env.push == 'true'
-        env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_TOKEN: ${{ secrets.GENERATE_CHANGELOG }}
-        run: |
-          git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+  on:
+    push:
+      branches:
+        - main  # Adjust this to your main branch
+    
+    pull_request:
+      types: [closed]
+  
+    release:
+      types: [published]
+  
+    issues:
+      types: [closed, edited]
+  
+  jobs:
+    generate-changelog:
+      runs-on: ubuntu-latest
+      name: Generate changelog for main branch
+  
+      steps:
+        - name: "📥 Check-out"
+          uses: actions/checkout@v4.1.1
+        
+        - name: "✏️ Generate full changelog"
+          id: generate-full-changelog
+          uses: heinrichreimer/action-github-changelog-generator@v2.4
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            headerLabel: "# 📑 Changelog"
+            breakingLabel: '### 💥 Breaking'
+            enhancementLabel: '### 🚀 Enhancements'
+            bugsLabel: '### 🐛 Bug fixes'
+            deprecatedLabel: '### ⚠️ Deprecations'
+            removedLabel: '### 🔥 Removals'
+            securityLabel: '### 🛡️ Security'
+            issuesLabel: '### 📁 Other issues'
+            prLabel: '### 📁 Other pull requests'
+            unreleasedLabel: '### 🚧 Unreleased'
+            addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
+            issues: true
+            issuesWoLabels: true
+            issueLineLabels: ALL
+            pullRequests: true
+            prWoLabels: true
+            author: true
+            unreleased: true
+            compareLink: true
+            stripGeneratorNotice: true
+            verbose: true
+            base: HISTORY.md
+            releaseUrl: https://github.com/Ghost-Hackers/sph-report-cleanup/releases
+            githubSite: https://github.com/Ghost-Hackers/sph-report-cleanup
+  
+        - name: Commit files
+          env:
+            CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
+            CI_EMAIL: ${{ secrets.YOUR_GITHUB_EMAIL }}
+          run: |
+            git config --local user.email "$CI_EMAIL"
+            git config --local user.name "$CI_USER"
+            git diff --exit-code --quiet || (git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo "push=true" >> $GITHUB_ENV || echo "No changes to CHANGELOG.md")
+  
+        - name: Push changes
+          if: env.push == 'true'
+          run: |
+            git push "https://${{ secrets.YOUR_GITHUB_USER }}:${{ secrets.GENERATE_CHANGELOG }}@github.com/${{ github.repository }}.git" HEAD:main
+ 
+#  Changes made:
+#  1. Replaced `master` with `main` to match the default branch name.
+#  2. Modified the push event to trigger on the `main` branch.
+#  3. Simplified the `Push changes` step to use the repository context directly.
