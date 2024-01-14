@@ -1,4 +1,14 @@
+![Ethereal Codex GIF](../images/Ethereal-Codex.gif)
+
 > # Ethereal Codex for Ghostly Code Weaving
+
+### Ethereal Introduction
+
+Embark on a spectral journey through the realms of the Coding Style Guide, a sacred manuscript meticulously crafted for the ethereal projects within the [Ghost-Hackers](https://github.com/Ghost-Hackers) organization. These ghostly pages weave an enchanting spell of consistency, summoning a harmonious coding environment across our spectral endeavors. Embrace this otherworldly approach, for it transcends mere code formatting—it is a manifestation of our collective essence.
+
+As spectral beings of Ghost-Hackers, we believe in the power of a well-maintained and consistent coding style—a ghostly sigil symbolizing our unwavering commitment to excellence. Whether you traverse the shadows as a seasoned contributor or embark on your first spectral steps, these spectral guidelines will not only guide your coding endeavors but also contribute to the spectral elegance and professionalism that defines our ghostly projects.
+
+Together, let us embark on this spectral coding journey, dancing with the whispers of shared values and aspirations that echo through the corridors of the Ghost-Hackers community.
 
 > ## Table of Shadows
 
@@ -18,14 +28,6 @@
 8. [Testing Seances](#testing)
 9. [Error Haunting](#error-handling)
 10. [Dependency Incantations](#dependencies)
-
-> # Ethereal Introduction
-
-Embark on a spectral journey through the realms of the Coding Style Guide, a sacred manuscript meticulously crafted for the ethereal projects within the [Ghost-Hackers](https://github.com/Ghost-Hackers) organization. These ghostly pages weave an enchanting spell of consistency, summoning a harmonious coding environment across our spectral endeavors. Embrace this otherworldly approach, for it transcends mere code formatting—it is a manifestation of our collective essence.
-
-As spectral beings of Ghost-Hackers, we believe in the power of a well-maintained and consistent coding style—a ghostly sigil symbolizing our unwavering commitment to excellence. Whether you traverse the shadows as a seasoned contributor or embark on your first spectral steps, these spectral guidelines will not only guide your coding endeavors but also contribute to the spectral elegance and professionalism that defines our ghostly projects.
-
-Together, let us embark on this spectral coding journey, dancing with the whispers of shared values and aspirations that echo through the corridors of the Ghost-Hackers community.
 
 > ## Formatting
 
