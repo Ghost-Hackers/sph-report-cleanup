@@ -24,7 +24,7 @@ jobs:
 
       - name: "✏️ Generate full changelog"
         id: generate-full-changelog
-        uses: charmixer/auto-changelog-action@v1.4
+        uses: heinrichreimer/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
           headerLabel: "# 📑 Changelog"
@@ -38,6 +38,7 @@ jobs:
           prLabel: '### 📁 Other pull requests'
           unreleasedLabel: '### 🚧 Unreleased'
           addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
+          sinceTag: 0.1.0
           issues: true
           issuesWoLabels: true
           issueLineLabels: ALL
@@ -68,8 +69,3 @@ jobs:
           CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN }}
         run: |
           git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
-
-#  Changes made:
-#  1. Replaced `master` with `main` to match the default branch name.
-#  2. Modified the push event to trigger on the `main` branch.
-#  3. Simplified the `Push changes` step to use the repository context directly.
