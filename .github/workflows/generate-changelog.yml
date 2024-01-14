@@ -27,17 +27,17 @@ jobs:
         uses: heinrichreimer/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
-          headerLabel: "# 📑 Changelog"
-          breakingLabel: '### 💥 Breaking'
-          enhancementLabel: '### 🚀 Enhancements'
-          bugsLabel: '### 🐛 Bug fixes'
-          deprecatedLabel: '### ⚠️ Deprecations'
-          removedLabel: '### 🔥 Removals'
-          securityLabel: '### 🛡️ Security'
-          issuesLabel: '### 📁 Other issues'
-          prLabel: '### 📁 Other pull requests'
-          unreleasedLabel: '### 🚧 Unreleased'
-          addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
+          headerLabel: "> # :book: Changelog"
+          breakingLabel: '## :boom: Breaking'
+          enhancementLabel: '## :rocket: Enhancements'
+          bugsLabel: '## :bug: Bug fixes'
+          deprecatedLabel: '## :warning: Deprecations'
+          removedLabel: '## :fire: Removals'
+          securityLabel: '## :shield: Security'
+          issuesLabel: '## :file_folder: Other issues'
+          prLabel: '## :file_folder: Other pull requests'
+          unreleasedLabel: '## :construction: Unreleased'
+          addSections: '{"documentation":{"prefix":"## :book: Documentation","labels":["documentation"]},"tests":{"prefix":"## :white_check_mark: Testing","labels":["tests"]}}'
           sinceTag: v0.1.0
           issues: true
           issuesWoLabels: true

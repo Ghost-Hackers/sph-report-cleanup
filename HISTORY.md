@@ -1,6 +1,6 @@
-# HISTORICAL CHANGELOG
+> # HISTORICAL CHANGELOG
 
-## [Unreleased]
+## [Unreleased](https://github.com/Ghost-Hackers/sph-report-cleanup/compare/v0.1.0...HEAD)
 
 ### Added
 - 
@@ -11,16 +11,13 @@
 ### Fixed
 - 
 
-## [0.1.0] - 01-12-2024
+## [0.1.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0) - 01-12-2024
 
 ### Added
-- Initial release.
+- Initial release of the SPH Report Cleanup script.
 
 ### Changed
 - N/A
 
 ### Fixed
 - N/A
-
-[Unreleased]: https://github.com/Ghost-Hackers/sph-report-cleanup/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0
