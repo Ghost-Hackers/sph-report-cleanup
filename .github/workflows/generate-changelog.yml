@@ -24,9 +24,9 @@ jobs:
 
       - name: "✏️ Generate full changelog"
         id: generate-full-changelog
-        uses: heinrichreimer/action-github-changelog-generator@v2.3
+        uses: charmixer/auto-changelog-action@v1.4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
           headerLabel: "# 📑 Changelog"
           breakingLabel: '### 💥 Breaking'
           enhancementLabel: '### 🚀 Enhancements'
@@ -65,7 +65,7 @@ jobs:
         if: env.push == 'true'
         env:
           CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN }}
         run: |
           git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
