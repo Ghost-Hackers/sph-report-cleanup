@@ -49,7 +49,7 @@ jobs:
           compareLink: true
           stripGeneratorNotice: true
           verbose: true
-          base: HISTORY.md
+          base: CHANGELOG.md
           releaseUrl: https://github.com/Ghost-Hackers/sph-report-cleanup/releases
           githubSite: https://github.com/Ghost-Hackers/sph-report-cleanup
 
