@@ -59,7 +59,6 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
 
 </details>
 
-
 ## Table of Contents
 
 - [Getting Started](#getting-started)
@@ -183,7 +182,7 @@ Currently there are no recent issues. If you have an issue, please open one and 
 
 > ## Changelog
 
-For a detailed changelog, please refer to the [CHANGELOG.md](CHANGELOG.md) file. It contains information about every release, including notable changes, bug fixes, and new features. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). The latest release is [v0.1.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0). The latest pre-release is [v1.0.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v1.0.0).
+For a detailed changelog, please refer to the [CHANGELOG.md](CHANGELOG.md) file. It contains information about every release, including notable changes, bug fixes, and new features. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). The latest release is [v0.1.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0). <!-- The latest pre-release is [v1.0.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v1.0.0). -->
 
 > ## Contributing
 
