@@ -38,7 +38,7 @@ jobs:
           prLabel: '### 📁 Other pull requests'
           unreleasedLabel: '### 🚧 Unreleased'
           addSections: '{"documentation":{"prefix":"### 📖 Documentation","labels":["documentation"]},"tests":{"prefix":"### ✅ Testing","labels":["tests"]}}'
-          sinceTag: 0.1.0
+          sinceTag: v0.1.0
           issues: true
           issuesWoLabels: true
           issueLineLabels: ALL
