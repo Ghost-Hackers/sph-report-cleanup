@@ -6,13 +6,13 @@ on:
       - master  # Adjust this to your main branch
 
   pull_request:
-    types: [closed]
+    types: [closed, reopened, synchronize, ready_for_review, opened, edited, review_requested, review_request_removed, ready_for_review, converted_to_draft, locked, unlocked]
 
   release:
-    types: [published]
+    types: [published, edited, deleted, prereleased, released, created]
 
   issues:
-    types: [closed, edited]
+    types: [closed, reopened, opened, edited, deleted]
 
 jobs:
   generate-changelog:
@@ -52,11 +52,6 @@ jobs:
           base: HISTORY.md
           releaseUrl: https://github.com/Ghost-Hackers/sph-report-cleanup/releases
           githubSite: https://github.com/Ghost-Hackers/sph-report-cleanup
-      
-      - name: Display emojis
-        run: |
-          echo "Changelog with emojis:"
-          cat CHANGELOG.md
 
       - name: Commit files
         env:
