@@ -161,13 +161,13 @@ def ethereal_function(arg1, arg2):
 - Clearly document external dependencies.
 - Include version numbers for reproducibility.
 
-### Styling for Python
+> ## Styling for Python
 
-#### PEP 8 Compliance
+### PEP 8 Compliance
 
 Follow the guidelines outlined in [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code.
 
-#### Type Hints
+### Type Hints
 
 Consider using [type hints](https://docs.python.org/3/library/typing.html) to enhance code clarity and assist with static analysis.
 
@@ -176,9 +176,9 @@ def example_function(arg1: int, arg2: str) -> bool:
     ...
 ```
 
-### Styling for JavaScript
+> ## Styling for JavaScript
 
-#### StandardJS
+### StandardJS
 
 Adhere to the [StandardJS](https://standardjs.com/) for JavaScript code.
 
@@ -190,9 +190,9 @@ const exampleArray = [1, 2, 3];
 var exampleArray = new Array(1, 2, 3);
 ```
 
-### Styling for HTML
+> ## Styling for HTML
 
-#### HTML5 Best Practices
+### HTML5 Best Practices
 
 Follow the best practices for HTML5 outlined by the [HTML Living Standard](https://html.spec.whatwg.org/multipage/).
 
@@ -223,9 +223,9 @@ Follow the best practices for HTML5 outlined by the [HTML Living Standard](https
 </html>
 ```
 
-### Styling for CSS
+> ## Styling for CSS
 
-#### BEM Methodology
+### BEM Methodology
 
 Follow the [Block Element Modifier (BEM)](http://getbem.com/) methodology for writing CSS.
 
@@ -257,9 +257,9 @@ Follow the [Block Element Modifier (BEM)](http://getbem.com/) methodology for wr
 }
 ```
 
-### Styling for Shell Scripting
+> ## Styling for Shell Scripting
 
-#### ShellCheck
+### ShellCheck
 
 Use [ShellCheck](https://www.shellcheck.net/) to analyze and improve your shell scripts.
 
@@ -275,9 +275,9 @@ echo "Hello, spectral world!"
 Echo "Hello, spectral world!"
 ```
 
-### Styling for Java
+> ## Styling for Java
 
-#### Google Java Style Guide
+### Google Java Style Guide
 
 Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) for Java code.
 
@@ -309,9 +309,9 @@ public class ghostly_class {
 }
 ```
 
-### Styling for C++
+> ## Styling for C++
 
-#### Google C++ Style Guide
+### Google C++ Style Guide
 
 Follow the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for C++ code.
 
