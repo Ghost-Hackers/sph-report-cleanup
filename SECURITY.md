@@ -1,20 +1,37 @@
-> # <p align="center">Security Policy</p>
+> # <p align="center">SPH Report Cleanup Security Policy</p>
+
+## Table of Contents
+
+- [SPH Report Cleanup Security Policy](#sph-report-cleanup-security-policy)
+  - [Table of Contents](#table-of-contents)
+  - [Versioning](#versioning)
+  - [Supported Versions](#supported-versions)
+  - [Reporting a Vulnerability](#reporting-a-vulnerability)
+  - [Project Updates and Discussions](#project-updates-and-discussions)
+
+## Versioning
+
+Our versioning follows [Semantic Versioning (SemVer)](https://semver.org/). To ensure optimal security and functionality, it is recommended to use the latest version of sph-report-cleanup.
+
 ## Supported Versions
 
-Currently we only support the latest version. Previous versions are not recommended to be used. We will update this section as we release new versions.
+We offer support only for the latest version. Using previous versions is not recommended. Make sure you are on the most recent release to benefit from improved security measures and features.
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.0.0   | :white_check_mark: |
 | < 1.0.0 | :x:                |
 
-
 ## Reporting a Vulnerability
 
-To report a vulnerability please create an [Issue](https://github.com/Ghost-Hackers/sph-report-cleanup/issues) using the [template](https://github.com/Ghost-Hackers/sph-report-cleanup/blob/master/.github/ISSUE_TEMPLATE/bug_report.md) provided. Please be as detailed as possible when reporting a vulnerability. This will help us to resolve the issue as quickly as possible. If you have a solution to the vulnerability, please submit a [Pull Request](https://github.com/Ghost-Hackers/sph-report-cleanup/compare) with the solution. If you do not have a solution, please provide as much information as possible to help us resolve the issue. If you have a suggestion on how to fix the vulnerability, please include it in the description.
+To report a vulnerability, create an [Issue](https://github.com/Ghost-Hackers/sph-report-cleanup/issues) using our [Vulnerability Report Template](https://github.com/Ghost-Hackers/sph-report-cleanup/blob/master/.github/ISSUE_TEMPLATE/bug_report.md). Please provide detailed steps to reproduce the issue and relevant information for a prompt resolution.
 
-You can check our [discussions](https://github.com/orgs/Ghost-Hackers/discussions/categories/announcements) for updates on reported vulnerability and opened issues, as well as to get a report on the project as things move along.
+If you have a solution, submit a [Pull Request](https://github.com/Ghost-Hackers/sph-report-cleanup/compare). If not, include as much information as possible. Suggestions for fixing the vulnerability are also appreciated and can be mentioned in the description.
 
-We will do our best to post an update on the progress of things as often as we can. You can always [ask us](https://github.com/orgs/Ghost-Hackers/discussions/categories/q-a) for updates or an ETC[^1] for a resolution. We will do our best to respond to you as quickly as possible. We will also do our best to resolve the issue as quickly as possible.
+## Project Updates and Discussions
 
-[^1]: Estimated Time of Completion - The estimated time for the issue to be resolved. This is not a guarantee that the issue will be resolved by the estimated time. This is does not a guarantee that the issue will be resolved at all. This is merely an estimated timeframe to indicate how long we believe it will take us to reach a feasible solution.
+Stay informed by participating in our [discussions](https://github.com/orgs/Ghost-Hackers/discussions/categories/announcements). Get updates on reported vulnerabilities, ongoing issues, and project developments. Your active involvement is crucial to enhancing sph-report-cleanup's capabilities.
+
+We'll strive to provide regular progress updates. For immediate inquiries or estimated timeframes, feel free to [ask us](https://github.com/orgs/Ghost-Hackers/discussions/categories/q-a). ETC[^1] is an estimation, not a guarantee, but it gives you an idea of our expected resolution timeframe.
+
+[^1]: ETC - Estimated Time of Completion. An approximation of the time we anticipate resolving the issue.
