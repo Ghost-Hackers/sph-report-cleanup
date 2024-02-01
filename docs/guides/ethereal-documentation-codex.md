@@ -2,26 +2,31 @@
 
 > # Ethereal Documentation Codex
 
-### Introduction: Beyond the Veil
+## Introduction: Beyond the Veil
 
 Welcome to the Ethereal Documentation Codex, a guide transcending mortal realms. Embrace the mystical journey through arcane arts of documentation. Let spirits guide you through ethereal realms.
 
 > ## Table of Shadows
-1. [Ethereal Themes: A Symphony of Spirits](#ethereal-themes-a-symphony-of-spirits)
-2. [Guiding Spirits: Table of Contents](#guiding-spirits-table-of-contents)
-3. [Portals to Knowledge: Hyperlinked Realms](#portals-to-knowledge-hyperlinked-realms)
-4. [Images and Visual Elements: Ghostly Manifestations](#images-and-visual-elements-ghostly-manifestations)
-5. [Interactive Elements: Seances of Understanding](#interactive-elements-seances-of-understanding)
-6. [User Contributions: Spirits in Communion](#user-contributions-spirits-in-communion)
-7. [Troubleshooting Portals: Navigating the Ethereal Abyss](#troubleshooting-portals-navigating-the-ethereal-abyss)
-8. [API Invocation: Conjuring Ethereal Powers](#api-invocation-conjuring-ethereal-powers)
-9. [Release Notes: Spirits of Change](#release-notes-spirits-of-change)
+
+- [Ethereal Documentation Codex](#ethereal-documentation-codex)
+  - [Introduction: Beyond the Veil](#introduction-beyond-the-veil)
+  - [Table of Shadows](#table-of-shadows)
+  - [Ethereal Themes: A Symphony of Spirits](#ethereal-themes-a-symphony-of-spirits)
+  - [Guiding Spirits: Table of Contents](#guiding-spirits-table-of-contents)
+  - [Portals to Knowledge: Hyperlinked Realms](#portals-to-knowledge-hyperlinked-realms)
+  - [Images and Visual Elements: Ghostly Manifestations](#images-and-visual-elements-ghostly-manifestations)
+  - [Interactive Elements: Seances of Understanding](#interactive-elements-seances-of-understanding)
+  - [User Contributions: Spirits in Communion](#user-contributions-spirits-in-communion)
+  - [Troubleshooting Portals: Navigating the Ethereal Abyss](#troubleshooting-portals-navigating-the-ethereal-abyss)
+  - [API Invocation: Conjuring Ethereal Powers](#api-invocation-conjuring-ethereal-powers)
+  - [Release Notes: Spirits of Change](#release-notes-spirits-of-change)
 
 > ## Ethereal Themes: A Symphony of Spirits
 
 Set the ambiance with ethereal themes resonating with spirits. Choose color palettes evoking the mystical, and fonts dancing with the elegance of unseen entities.
 
 Example:
+
 ```css
 body {
   background-color: #2c3e50; /* Midnight Blue - A portal to the cosmic abyss */
@@ -35,6 +40,7 @@ body {
 Create a spectral table of contents guiding readers through ethereal realms. Let each link be a portal to undiscovered knowledge.
 
 Example:
+
 ```markdown
 ## Table of Contents
 
@@ -54,6 +60,7 @@ Example:
 Create portals to knowledge through hyperlinked realms. Let readers traverse ethereal landscapes with ease.
 
 Example:
+
 ```markdown
 ## 3.1 Portals to Knowledge: Hyperlinked Realms
 
@@ -65,6 +72,7 @@ Explore the [Ghostly Forest](#8-images-and-visual-elements-ghostly-manifestation
 Enhance the ethereal experience by summoning ghostly images and visual elements. Let them materialize amidst the text, guiding readers through mystical landscapes of your documentation.
 
 Example:
+
 ```markdown
 ## 8. Images and Visual Elements: Ghostly Manifestations
 
@@ -84,6 +92,7 @@ Example:
   def summon_unseen_script():
       print("The ethereal script reveals itself to those who seek.")
   ```
+
 </details>
 
 > ## User Contributions: Spirits in Communion
@@ -98,6 +107,7 @@ Example: </br>
 In the journey through the ethereal abyss, create portals to troubleshoot common challenges. Offer spectral solutions that guide readers out of the darkness.
 
 Example:
+
 ```markdown
 ## 34. Troubleshooting Portals: Navigating the Ethereal Abyss
 
@@ -109,11 +119,13 @@ If disoriented, consult the [ghostly map](#3-guiding-spirits-table-of-contents) 
 Invoke ethereal powers through API documentation. Guide users in channeling unseen forces using clear and concise API invocation instructions.
 
 Example:
+
 ```markdown
 ## 35. API Invocation: Conjuring Ethereal Powers
 
 To channel ethereal energy, make a spectral API request using the following incantation:
 ```
+
 ```bash
 curl -X GET https://api.ethereal-energy.com/channel
 ```
@@ -123,6 +135,7 @@ curl -X GET https://api.ethereal-energy.com/channel
 Chronicle spirits of change with ethereal release notes. Let users glimpse into the evolving nature of your project, understanding the dance of spirits across versions.
 
 Example:
+
 ```markdown
 ## 36. Release Notes: Spirits of Change
 
@@ -138,3 +151,5 @@ Example:
 
 ---
 *May the expanded Ethereal Documentation Codex be your guide through ever-shifting mists of knowledge.*
+
+[Back to top](#ethereal-documentation-codex)

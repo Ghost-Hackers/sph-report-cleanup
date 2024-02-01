@@ -2,7 +2,7 @@
 
 > # Ethereal Codex for Ghostly Code Weaving
 
-### Ethereal Introduction
+## Ethereal Introduction
 
 Embark on a spectral journey through the realms of the Coding Style Guide, a sacred manuscript meticulously crafted for the ethereal projects within the [Ghost-Hackers](https://github.com/Ghost-Hackers) organization. These ghostly pages weave an enchanting spell of consistency, summoning a harmonious coding environment across our spectral endeavors. Embrace this otherworldly approach, for it transcends mere code formatting—it is a manifestation of our collective essence.
 
@@ -12,22 +12,39 @@ Together, let us embark on this spectral coding journey, dancing with the whispe
 
 > ## Table of Shadows
 
-1. [Introduction](#ethereal-introduction)
-2. [Formatting](#formatting)
-   - [Indentation](#indentation)
-   - [Spacing](#spacing)
-   - [Line Length](#line-length)
-3. [Naming Enchantments](#naming-conventions)
-   - [Variables](#variables)
-   - [Functions](#functions)
-   - [Classes](#classes)
-4. [Whispers of Comments](#comments)
-5. [Spectral Documentation](#documentation)
-6. [Best Conjuring Practices](#best-practices)
-7. [Version Control Rituals](#version-control)
-8. [Testing Seances](#testing)
-9. [Error Haunting](#error-handling)
-10. [Dependency Incantations](#dependencies)
+- [Ethereal Codex for Ghostly Code Weaving](#ethereal-codex-for-ghostly-code-weaving)
+  - [Ethereal Introduction](#ethereal-introduction)
+  - [Table of Shadows](#table-of-shadows)
+  - [Formatting](#formatting)
+    - [Indentation](#indentation)
+    - [Spacing](#spacing)
+    - [Line Length](#line-length)
+  - [Naming Enchantments](#naming-enchantments)
+    - [Variables](#variables)
+    - [Functions](#functions)
+    - [Classes](#classes)
+  - [Whispers of Comments](#whispers-of-comments)
+  - [Spectral Documentation](#spectral-documentation)
+  - [Best Conjuring Practices](#best-conjuring-practices)
+  - [Version Control Rituals](#version-control-rituals)
+  - [Testing Seances](#testing-seances)
+  - [Error Haunting](#error-haunting)
+  - [Dependency Incantations](#dependency-incantations)
+  - [Styling for Python](#styling-for-python)
+    - [PEP 8 Compliance](#pep-8-compliance)
+    - [Type Hints](#type-hints)
+  - [Styling for JavaScript](#styling-for-javascript)
+    - [StandardJS](#standardjs)
+  - [Styling for HTML](#styling-for-html)
+    - [HTML5 Best Practices](#html5-best-practices)
+  - [Styling for CSS](#styling-for-css)
+    - [BEM Methodology](#bem-methodology)
+  - [Styling for Shell Scripting](#styling-for-shell-scripting)
+    - [ShellCheck](#shellcheck)
+  - [Styling for Java](#styling-for-java)
+    - [Google Java Style Guide](#google-java-style-guide)
+  - [Styling for C++](#styling-for-c)
+    - [Google C++ Style Guide](#google-c-style-guide)
 
 > ## Formatting
 
@@ -342,3 +359,6 @@ public:
     }
 }
 ```
+
+---
+[Back to top](#ethereal-codex-for-ghostly-code-weaving)
