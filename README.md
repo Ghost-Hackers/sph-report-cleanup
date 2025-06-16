@@ -32,6 +32,8 @@
 
 The script employs a PowerShell script to find and delete SPH PDF files based on the predetermined search format: **"sph*.pdf"**. This specific format is chosen to safeguard against unintended deletion of non-SPH files. The script's sole purpose is to clean up residual report files in the "Downloads" folder, enhancing system hygiene.
 
+<i>Soon to be archived. Some corrections and improvements pending.</i>
+
 <details>
   <summary>Examples of SPH Reports Looked For</summary>
   <!-- Include examples or details of the SPH reports the script looks for. -->
