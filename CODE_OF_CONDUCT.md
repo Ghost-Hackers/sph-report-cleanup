@@ -1,57 +1,124 @@
-> # <p align="center">Code of Conduct</p>
+<!-- Ghost Hackers Brand -->
+<p align="center">
+  <img src="assets/images/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
+  <span style="font-size:2.2em; font-weight:bold; vertical-align:middle; margin-left: 0.5em; color:#1aff66;">Ghost Hackers</span>
+</p>
+
+> # <p align="center">[Code of Conduct](/CODE_OF_CONDUCT.md)</p>
+
+> ## Purpose & Commitment
+
+<div align="justify">
+
+  [Ghost Hackers](https://github.com/ghost-hackers) is committed to providing a welcoming, safe, and inclusive environment for everyone. This [Code of Conduct](/CODE_OF_CONDUCT.md) outlines our expectations for all participants and the steps for reporting and resolving unacceptable behavior.
+
+  We believe that diversity and inclusion are essential to our community's success, and we strive to create a space where everyone feels valued and respected.
+
+</div>
 
 > ## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-  - [Table of Contents](#table-of-contents)
-  - [Our Pledge](#our-pledge)
-  - [Our Standards](#our-standards)
-  - [Our Responsibilities](#our-responsibilities)
-  - [Scope](#scope)
-  - [Enforcement](#enforcement)
-  - [Attribution](#attribution)
+- [Purpose & Commitment](#purpose--commitment)
+- [Expected Behavior](#expected-behavior)
+- [Unacceptable Behavior](#unacceptable-behavior)
+- [Reporting & Enforcement](#reporting--enforcement)
+- [Scope](#scope)
+- [Consequences](#consequences)
+- [Appeals & Restorative Practices](#appeals--restorative-practices)
+- [Confidentiality & Privacy](#confidentiality--privacy)
+- [Attribution](#attribution)
 
-> ## Our Pledge
+> ## Expected Behavior
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+<div align="justify">
 
-> ## Our Standards
+  All participants are expected to be respectful, considerate, and inclusive in all interactions. Welcoming and inclusive language should be used at all times, and differing viewpoints and experiences should be valued. Constructive feedback should be accepted gracefully, and the focus should remain on what is best for the community. Empathy and kindness are essential, as is giving credit where due and acknowledging the work of others. Personal boundaries and privacy must be respected, and participants should always assume good intentions and seek clarification before escalating conflicts.
 
-|     | Examples of behavior that contributes to creating a positive environment include                              |
-| --- | ------------------------------------------------------------------------------------------------------------- |
-| :white_check_mark: | Using welcoming and inclusive language                                                         |
-| :white_check_mark: | Respecting differing viewpoints and experiences                                                |
-| :white_check_mark: | Gracefully accepting constructive criticism                                                    |
-| :white_check_mark: | Focusing on what is best for the community                                                     |
-| :white_check_mark: | Showing empathy towards other community members                                                |
+  We encourage open and honest communication, active listening, and a willingness to learn from one another. Participants should strive to create an environment where everyone feels comfortable sharing their ideas and experiences.
 
-|     | Examples of unacceptable behavior by participants                                                             |
-| --- | ------------------------------------------------------------------------------------------------------------- |
-| :x: | The use of sexualized language or imagery and unwelcome sexual attention or advances                          |
-| :x: | Trolling, insulting/derogatory comments, and personal or political attacks                                    |
-| :x: | Public or private harassment                                                                                  |
-| :x: | Publishing others' private information, such as a physical or electronic address, without explicit permission |
-| :x: | Other conduct which could reasonably be considered inappropriate in a professional setting                    |
+</div>
 
-> ## Our Responsibilities
+> ## Unacceptable Behavior
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+<div align="justify">
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+  Unacceptable behaviors include harassment, intimidation, or discrimination in any form. This also covers the use of sexualized language or imagery, unwelcome sexual attention or advances, trolling, insulting or derogatory comments, and personal or political attacks. Public or private harassment, publishing others’ private information without explicit permission, and sustained disruption of discussions, meetings, or events are not tolerated. Retaliation against individuals who report [Code of Conduct](/CODE_OF_CONDUCT.md) violations is strictly prohibited. Any conduct that could reasonably be considered inappropriate in a professional setting is also unacceptable.
+
+  We do not tolerate any form of hate speech, including but not limited to racism, sexism, homophobia, transphobia, ableism, or any other form of discrimination. Participants should be mindful of their language and behavior, ensuring that it is inclusive and respectful of all individuals.
+
+</div>
+
+> ## Reporting & Enforcement
+
+<div align="justify">
+
+  If you experience or witness unacceptable behavior, please report it by emailing us. Reports are confidential and will be handled promptly and fairly. All complaints will be reviewed and investigated promptly and impartially. The project lead is responsible for enforcement and may consult trusted community members as needed. Actions may include warnings, temporary or permanent exclusion, or other appropriate responses. The project lead will maintain confidentiality and communicate reasons for moderation decisions when appropriate.
+
+</div>
+
+<div align="center">
+
+  [![Report Code of Conduct Violation](https://img.shields.io/badge/Report-Code%20of%20Conduct%20Violation-red?style=plastic&logo=gmail)](mailto:ghost-hackers@outlook.com?subject=Code%20of%20Conduct%20Report&body=Hello%20Ghost%20Hackers%20Team,%0A%0AI%20would%20like%20to%20report%20a%20potential%20violation%20of%20the%20Code%20of%20Conduct.%0A%0A---%0A**Your%20Name%20(optional):**%20[Your%20Name]%0A**Contact%20Information%20(optional):**%20[Email%20or%20other%20contact]%0A%0A**Description%20of%20Incident:**%0A[Please%20describe%20what%20happened,%20who%20was%20involved,%20and%20when%20it%20occurred.%20Include%20any%20relevant%20details%20or%20evidence.]%0A%0A**How%20was%20the%20Code%20of%20Conduct%20breached?**%0A[Explain%20which%20part%20of%20the%20Code%20of%20Conduct%20you%20believe%20was%20violated%20and%20why.]%0A%0A**Additional%20Information%20or%20Concerns:**%0A[Optional]%0A%0A---%0ABy%20submitting%20this%20report,%20I%20acknowledge%20the%20Ghost%20Hackers%20Code%20of%20Conduct:%20https://github.com/Ghost-Hackers/sph-report-cleanup/CODE_OF_CONDUCT.md)
+
+</div>
+
+- All complaints will be reviewed and investigated promptly and impartially.
+- The project lead is responsible for enforcement and may consult trusted community members as needed.
+- Actions may include warnings, temporary or permanent exclusion, or other appropriate responses.
+- The project lead will maintain confidentiality and communicate reasons for moderation decisions when appropriate.
 
 > ## Scope
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community.
+<div align="justify">
 
-> ## Enforcement
+  This [Code of Conduct](/CODE_OF_CONDUCT.md) applies to all project spaces, including online platforms, public events, private communications, and any situation where an individual is representing [SPH Report Cleanup](https://github.com/ghost-hackers/sph-report-cleanup) or its community, both online and offline.
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [ghost-hackers@outlook.com](mailto:ghost-hackers@outlook.com). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+  It also applies to all participants, including contributors, maintainers, organizers, and community members.
 
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+</div>
+
+> ## Consequences
+
+<div align="justify">
+
+  Participants asked to stop any harassing or inappropriate behavior are expected to comply immediately. If a participant engages in unacceptable behavior, the project lead may take any action deemed appropriate, including:
+
+</div>
+
+- Verbal or written warning
+- Temporary or permanent removal from the community, events, or online spaces
+- Reversal of contributions (e.g., code, comments, issues)
+- Reporting to relevant authorities if required by law
+
+> ## Appeals & Restorative Practices
+
+<div align="justify">
+
+  Anyone who is subject to or witnesses an enforcement action may appeal the decision by contacting the project lead. Appeals will be reviewed in good faith and may involve additional trusted community members. Where possible, restorative practices (such as mediation or facilitated discussion) may be offered to resolve conflicts and restore trust.
+
+  Restorative practices aim to repair harm, rebuild relationships, and foster understanding among all parties involved. The goal is to create a supportive environment where everyone can learn from their mistakes and grow.
+
+</div>
+
+> ## Confidentiality & Privacy
+
+<div align="justify">
+
+  We take privacy and confidentiality seriously. All reports and enforcement actions will be handled with the utmost care to protect the identities of those involved. Information will only be shared with those who need to know to resolve the issue, and all parties will be treated with respect and dignity throughout the process.
+
+  Participants are also expected to respect the privacy of others and not disclose personal information without consent. This includes respecting the confidentiality of discussions, reports, and enforcement actions.
+
+</div>
 
 > ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at [https://www.contributor-covenant.org/version/2/0/code_of_conduct.html](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html).
+<div align="justify">
+
+  This [Code of Conduct](/CODE_OF_CONDUCT.md) is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, and other open community guidelines.
+
+  It is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). We encourage other communities to adopt similar codes of conduct to promote a positive and inclusive environment.
+
+</div>
 
 ---
-[Back to top](#code-of-conduct)
+[![Back to top](https://img.shields.io/badge/Back%20to%20top-222?style=plastic&logo=github)](#code-of-conduct)

@@ -1,4 +1,8 @@
-![Banner](<assets/images/README imgs/SPH Report Cleanup Header.png>)
+<!-- Ghost Hackers Brand -->
+<p align="center">
+  <img src="assets/images/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
+  <span style="font-size:2.2em; font-weight:bold; vertical-align:middle; margin-left: 0.5em; color:#1aff66;">Ghost Hackers</span>
+</p>
 
 <a href="https://github.com/Ghost-Hackers/sph-report-cleanup"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Ghost-Hackers/sph-report-cleanup?label=Repo%20Stars" /></a> <a href="https://github.com/Ghost-Hackers"><img alt="GitHub Org's stars" src="https://img.shields.io/github/stars/Ghost-Hackers?style=social&label=Org%20Stars" /></a> <img alt="GitHub collaborators" src="https://img.shields.io/github/contributors/Ghost-Hackers/sph-report-cleanup?style=social" /> <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/Ghost-Hackers/sph-report-cleanup?style=social" /> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/total?style=social" />
 
@@ -11,9 +15,6 @@
 <!--    !! REMEMBER TO UDPATE BADGES !!    -->
 
 <p align="center">
-    <img src="https://img.shields.io/badge/README updated on-1/10/2024-gold?style=plastic" />
-    <img src="https://img.shields.io/badge/last updated by-GH👻ST-white?style=plastic" />
-    </br>
     <object data="https://img.shields.io/github/v/release/Ghost-Hackers/sph-report-cleanup?include_prereleases&sort=date&display_name=tag&style=plastic&label=latest%20release&color=bright%20green" type="image/svg+xml">
         <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Ghost-Hackers/sph-report-cleanup?include_prereleases&sort=date&display_name=tag&style=plastic&label=latest%20release&color=bright%20green" />
     </object>
@@ -28,11 +29,22 @@
 [![Greetings](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/greetings.yml/badge.svg)](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/greetings.yml)
 [![Generate Changelog](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/generate-changelog.yml/badge.svg)](https://github.com/Ghost-Hackers/sph-report-cleanup/actions/workflows/generate-changelog.yml)
 
-**SPH Report Cleanup** is a Batch script designed to search for and clean up [Synxis Property Hub (SPH)](https://www.sabrehospitality.com/solutions/property-hub/) reports from the workstation's "Downloads" folder. This script features several enhancements for user convenience. It keeps itself and its dependencies up-to-date, ensuring a seamless experience.
+**SPH Report Cleanup** is a modern, user-friendly application for searching and cleaning up [Synxis Property Hub (SPH)](https://www.sabrehospitality.com/solutions/property-hub/) reports from your workstation's "Downloads" folder. The app now features a fully GUI-driven experience using Windows HTA (HTML Application) technology, providing a visually appealing, accessible, and easy-to-use interface for all users on Windows 10 and above.
 
-The script employs a PowerShell script to find and delete SPH PDF files based on the predetermined search format: **"sph*.pdf"**. This specific format is chosen to safeguard against unintended deletion of non-SPH files. The script's sole purpose is to clean up residual report files in the "Downloads" folder, enhancing system hygiene.
+---
 
-<i>Soon to be archived. Some corrections and improvements pending.</i>
+## Key Features (2025 Edition)
+
+- **Modern GUI**: All user interaction is through intuitive HTA windows—no command prompt or console windows are shown.
+- **Welcome/Info Screen**: On launch, users are greeted with a themed, accessible welcome screen explaining the app's purpose and usage.
+- **Main Application Window**: Features a tabbed interface (Scan, Console, Logs, Settings) for streamlined navigation.
+- **Built-in Console**: Script output is displayed in the Console tab, keeping everything within the app.
+- **Theme Toggle**: Easily switch between light and dark themes with a single click (moon/sun icon).
+- **Accessibility**: Improved keyboard navigation, color contrast, and screen reader support.
+- **No Installation Required**: Just download and run—no setup or admin rights needed for basic use.
+- **Safe File Handling**: Only targets files matching the "sph*.pdf" pattern to prevent accidental deletion.
+
+---
 
 <details>
   <summary>Examples of SPH Reports Looked For</summary>
@@ -65,136 +77,30 @@ The script employs a PowerShell script to find and delete SPH PDF files based on
 
 - [Getting Started](#getting-started)
   - [Downloading](#downloading)
-  - [Installing](#installing)
-- [What To Expect When Running The Script](#what-to-expect-when-running-the-script)
-- [FAQ](#faq)
-- [Repository Information](#repository-information)
-  - [Recent Issues](#recent-issues)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+  - [Launching](#launching)
+- [What To Expect When Using The App](#what-to-expect-when-using-the-app)
 
 > ## Getting Started
 
 ### Downloading
 
-To begin using **SPH Report Cleanup**, download the [latest release](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/download/v0.1.0/SPH.Report.Cleanup.bat). The script is a standalone Batch file; no additional downloads are required. The script will handle the installation of necessary dependencies automatically upon execution.
+To begin using **SPH Report Cleanup**, download the [latest release](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/latest). The app is portable and requires no installation.
 
-### Installing
+### Launching
 
-There is no installation process. The script will reside in the user's "Downloads" folder. While the script can be run from any location on the user's machine, it is recommended to move it to the desktop for easy access. The script creates a desktop shortcut with every run, ensuring an always up-to-date link.
+1. Double-click `SPH Report Cleanup.bat` to start the app.
+2. The welcome/info screen will appear—read the instructions and click Continue.
+3. The main application window will open, providing tabs for scanning, viewing logs, adjusting settings, and viewing script output in the built-in console.
+4. All actions and feedback are handled within the GUI—no command prompt or external windows will appear.
 
-> ## What To Expect When Running The Script
+> ## What To Expect When Using The App
 
-Upon running the script, it will perform the following tasks:
+- **Welcome/Info Screen**: Explains the app and offers a theme toggle for accessibility.
+- **Tabbed Main Window**: Navigate between Scan, Console, Logs, and Settings.
+- **Scan Tab**: Initiates the cleanup process, running the PowerShell script and displaying output in the Console tab.
+- **Console Tab**: View real-time script output and logs.
+- **Logs Tab**: Review past actions and results.
+- **Settings Tab**: Adjust preferences, including theme and accessibility options.
+- **No Console Windows**: All interaction is GUI-based for a seamless experience.
 
-- Attempt to run as an administrator
-  - If not granted administrative privileges, it will prompt for elevation, ensuring a one-time administrative session for necessary operations.
-- Verify and install dependencies
-  - Ensure proper functioning of the script.
-- Check for updates
-  - Download and install the latest version of the script and its dependencies, if available.
-- Display a progress bar
-  - Visualize the search for files matching the **"sph*.pdf"** format.
-- List files to be deleted
-  - Provide a preview of files targeted for deletion.
-- Confirm file deletion
-  - Prompt the user for confirmation to prevent accidental deletions.
-- Display informational message
-  - Showcase script details and offer options via buttons.
-- Create a desktop shortcut
-  - Facilitate easy script execution.
-- Terminate the script
-  - Exit after prompting the user to press any key.
-
-> ## FAQ
-
-1. **Why does the script need to be run manually?**
-   - The script is designed for user-initiated execution and is not intended for automatic runs.
-
-2. **Why does the script require Windows 10?**
-   - It relies on PowerShell 5.1 or higher, exclusive to Windows 10.
-
-3. **Why administrative privileges?**
-   - Necessary for file deletion in the user's Downloads folder and for self-updating.
-
-4. **Why run on a company machine?**
-   - Tailored for Synxis Property Hub files, serving no purpose on other machines.
-
-5. **Why run after downloading Synxis PDF files?**
-   - Targets cleanup of downloaded SPH files; irrelevant otherwise.
-
-6. **Automated script run?**
-   - Possible via Windows Task Scheduler but not recommended due to unnecessary resource usage.
-
-7. **Why check for updates?**
-   - Ensures script and dependencies are current for optimal functionality.
-
-8. **Different window during script run?**
-   - CMD Prompt window used for progress display; background downloads may spawn a second window.
-
-9. **Uninstall prompt during script run?**
-   - Git uninstalling previous versions as part of the update process.
-
-10. **"Cloning" or "pulling" message?**
-    - Git fetching the latest script version during the update.
-
-11. **Desktop run recommendation?**
-    - Convenience feature; script can run from any location, but desktop placement is advised.
-
-> ## Repository Information
-
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Ghost-Hackers/sph-report-cleanup?style=plastic"> <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=green"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Ghost-Hackers/sph-report-cleanup?style=plastic&color=yellow"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/latest/total?style=plastic&color=white">
-
-<details>
-  <summary>Commits</summary>
-  <!-- Include commit-related badges or information. -->
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Ghost-Hackers/sph-report-cleanup?style=plastic" /> 
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Ghost-Hackers/sph-report-cleanup?style=plastic">
-
-</details>
-
-<details>
-  <summary>Pull Requests</summary>
-  <!-- Include pull request-related badges or information. -->
-  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Ghost-Hackers/sph-report-cleanup?style=plastic&color=orange"> 
-  <img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Ghost-Hackers/sph-report-cleanup?style=plastic">
-</details>
-
-<details>
-  <summary>Downloads by Version</summary>
-  <!-- Include download-related badges or information by version. -->
-  <strong>V1.0 Downloads</strong> <sup>[*Ongoing*]</sup> </br>
-    <img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/v1.0.0/total?style=social">
-  </br>
-  <strong>V0.1 Downloads</strong> <sup>[*Discontinued*]</sup> </br>
-    <img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/Ghost-Hackers/sph-report-cleanup/v0.1.0/total?style=social">
-</details>
-
-### Recent Issue(s)
-
-<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/Ghost-Hackers/sph-report-cleanup?style=plastic&color=vividgreen"> <img alt="GitHub open issues" src="https://img.shields.io/github/issues/Ghost-Hackers/sph-report-cleanup?style=plastic&color=red" /> <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Abug&style=plastic&label=bugs&color=orange"> <img alt="GitHub issue custom search" src="https://img.shields.io/github/issues-search?query=repo%3AGhost-Hackers%2Fsph-report-cleanup%20is%3Aissue%20label%3Aenhancement&style=plastic&label=feature%20requests&color=yellow">
-
-Currently there are no recent issues. If you have an issue, please open one and let us know so we can fix it.
-<!-- 
-    - [x] #1
-    - [:white_check_mark:] #2
--->
-
-> ## Changelog
-
-For a detailed changelog, please refer to the [CHANGELOG.md](CHANGELOG.md) file. It contains information about every release, including notable changes, bug fixes, and new features. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). The latest release is [v0.1.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v0.1.0). <!-- The latest pre-release is [v1.0.0](https://github.com/Ghost-Hackers/sph-report-cleanup/releases/tag/v1.0.0). -->
-
-> ## Contributing
-
-Contributions are what make the open-source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly appreciated**. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to contribute. The process for submitting pull requests is described in [GitHub Help](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request). Please refer to the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file for our code of conduct. We welcome all contributions, including but not limited to the following: reporting issues, contributing code, submitting pull requests, identifying bugs, proposing new features, and creating suggestions. When contributing to this repository, please follow the [Ethereal Style Codex](/docs/guides/ethereal-style-codex.md) and the [Ethereal Documentation Codex](/docs/guides/ethereal-documentation-codex.md).
-
-> ## License
-
-This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details. The license is also available [online](https://www.gnu.org/licenses/agpl-3.0.en.html). The license is based on the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/). It is a copyleft license that requires anyone who distributes our code or a derivative work to make the source available under the same terms, and also provides an express grant of patent rights from contributors to users. It is compatible with the GNU GPL, but not with the GNU LGPL. The license is designed specifically to ensure that, if you make changes to this code and distribute the resulting executable, you must release your changes under the same license. It ensures that the user of a program that includes this code can download the source freely and modify it freely. It also ensures that the user can know what license the code is released under, and can use that code in other projects.
-
-> ## Contact
-
-- Please use the [Issues](https://github.com/Ghost-Hackers/sph-report-cleanup/issues) tab to report any issues, bugs, or enhancements (feature requests)
-- You may email us at [Ghost Hackers](mailto:ghost-hackers@outlook.com) for any other inquiries
+---

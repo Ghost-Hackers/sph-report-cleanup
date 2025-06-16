@@ -26,7 +26,7 @@ jobs:
         id: generate-full-changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.4
         with:
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           headerLabel: "> # 📑 Changelog"
           unreleasedLabel: '### 🚧 Unreleased'
           breakingLabel: '### 💥 Breaking'
@@ -54,18 +54,23 @@ jobs:
           githubSite: https://github.com/Ghost-Hackers/sph-report-cleanup
 
       - name: Commit files
-        env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_EMAIL: ${{ secrets.YOUR_GITHUB_EMAIL }}
+        id: commit_files
         run: |
-          git config --local user.email "$CI_EMAIL"
-          git config --local user.name "$CI_USER"
-          git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo "push=true" >> $GITHUB_ENV || echo "No changes to CHANGELOG.md"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add CHANGELOG.md
+          if git diff --cached --quiet; then
+            echo "No changes to CHANGELOG.md"
+            echo "push=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m 'Updated CHANGELOG.md'
+            echo "push=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Push changes
-        if: env.push == 'true'
+        if: steps.commit_files.outputs.push == 'true'
         env:
-          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-          CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          git pull --rebase
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}

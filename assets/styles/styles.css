@@ -1,22 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     margin: 10px;
-    background-color: black; /* Set the background color of the entire page */
-    color: white; /* Set the default text color */
 }
 
-/* Centered content */
-#center {
+/* Centered content (use class for new markup) */
+.center {
     display: block;
     margin: 0 auto;
     text-align: center;
 }
 
-/* Custom message box */
+/* Custom message box (theme colors set in theme CSS) */
 #customMessageBox {
-    background-color: black; /* Set the background color of the message box */
-    color: white; /* Set the text color of the message box */
-    border: 2px solid white; /* Set the border color of the message box */
     padding: 10px;
     border-radius: 5px;
     display: none;
@@ -26,7 +21,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.button-container {
+.button-container, .buttons {
     text-align: center;
     margin-top: 10px;
 }

@@ -1,0 +1,26 @@
+/* Light Theme */
+body {
+    background-color: #f7f9fa;
+    color: #222;
+}
+.container {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 12px;
+}
+h1, h2 {
+    color: #2d7be5;
+}
+hr {
+    border-top: 1px solid #e0e0e0;
+}
+.buttons button {
+    background: linear-gradient(90deg, #2d7be5 0%, #5ec6fa 100%);
+    color: #fff;
+}
+.buttons button:hover, .buttons button:focus {
+    background: linear-gradient(90deg, #1a5bb8 0%, #3eaeea 100%);
+}
+.version {
+    color: #888;
+}

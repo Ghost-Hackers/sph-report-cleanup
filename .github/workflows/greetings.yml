@@ -1,16 +1,32 @@
 name: Greetings
 
-on: [pull_request_target, issues]
+on:
+  issues:
+  pull_request:
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+concurrency:
+  group: greetings-${{ github.actor }}
+  cancel-in-progress: false
 
 jobs:
-  greeting:
+  greet-new-contributor:
+    name: Greet new contributor
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
+    timeout-minutes: 2
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Thank you for submitting your issue. We greatly appreciate your assistance!"
-        pr-message: "Thank you for the pull request. Your contribution is much appreciated!"
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 Hi @${{ github.actor }}!
+            Thank you for submitting your issue. We greatly appreciate your assistance!
+            Please review our [contributing guidelines](https://github.com/Ghost-Hackers/sph-report-cleanup/blob/master/CONTRIBUTING.md) and [code of conduct](https://github.com/Ghost-Hackers/sph-report-cleanup/blob/master/CODE_OF_CONDUCT.md).
+          pr-message: |
+            🎉 Thank you for the pull request, @${{ github.actor }}!
+            Your contribution is much appreciated!
+            Please make sure you've read our [contributing guidelines](https://github.com/Ghost-Hackers/sph-report-cleanup/blob/master/CONTRIBUTING.md).

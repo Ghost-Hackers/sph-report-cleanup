@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>SPH Report Cleanup - Main</title>
+    <hta:application id="oDisplayInfo" applicationname="SPHReportCleanupDisplayInfo" border="dialog" innerborder="no" icon="/assets/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+    <link rel="stylesheet" type="text/css" id="theme-style" href="/assets/styles/dark-theme.css">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.ico">
+    <script language="VBScript" src="/src/scripts/scripts.vbs"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>SPH Report Cleanup</h1>
+        <div class="buttons" style="margin-bottom:1.5em;">
+            <button class="tab-btn" onclick="ShowTab('scan')" aria-label="Scan" id="tab-scan">Scan</button>
+            <button class="tab-btn" onclick="ShowTab('console')" aria-label="Console" id="tab-console">Console</button>
+            <button class="tab-btn" onclick="ShowTab('logs')" aria-label="Logs" id="tab-logs">Logs</button>
+            <button class="tab-btn" onclick="ShowTab('settings')" aria-label="Settings" id="tab-settings">Settings</button>
+            <button id="theme-toggle" aria-label="Switch to Light Theme" style="margin-left:1em;font-size:1.2em;" title="Switch to Light Theme"><span id="theme-icon">🌙</span></button>
+        </div>
+        <div id="scan" class="tabcontent">
+            <h2>Scan for SPH Reports</h2>
+            <button onclick="StartScan()" aria-label="Start Scan" id="scan-btn">Start Scan</button>
+            <div id="scan-status" style="margin-top:1em;"></div>
+        </div>
+        <div id="console" class="tabcontent" style="display:none;">
+            <h2>Script Console</h2>
+            <pre id="console-output" style="width:100%;height:300px;background:#181a1b;color:#f5f5f5;font-family:monospace;border-radius:6px;padding:10px;overflow:auto;margin-top:1em;"></pre>
+        </div>
+        <div id="logs" class="tabcontent" style="display:none;">
+            <h2>Logs</h2>
+            <div id="logContent">No logs yet.</div>
+        </div>
+        <div id="settings" class="tabcontent" style="display:none;">
+            <h2>Settings</h2>
+            <p>Theme and other settings will appear here.</p>
+        </div>
+        <div class="footer center" style="margin-top:2em;font-size:0.95em;color:var(--footer-color,#888);">
+            &copy; 2025 Ghost Hackers &mdash; <a href="https://github.com/Ghost-Hackers/sph-report-cleanup" style="color:inherit;text-decoration:underline;">GitHub</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Tab logic
+        function ShowTab(tab) {
+            document.getElementById('scan').style.display = 'none';
+            document.getElementById('console').style.display = 'none';
+            document.getElementById('logs').style.display = 'none';
+            document.getElementById('settings').style.display = 'none';
+            document.getElementById(tab).style.display = '';
+            // Focus first actionable element in tab
+            if(tab==='scan') document.getElementById('scan-btn').focus();
+            if(tab==='console') document.getElementById('tab-console').focus();
+            if(tab==='logs') document.getElementById('tab-logs').focus();
+            if(tab==='settings') document.getElementById('tab-settings').focus();
+        }
+        // Theme toggle logic with icon
+        var isDark = true;
+        var themeToggle = document.getElementById('theme-toggle');
+        var themeIcon = document.getElementById('theme-icon');
+        themeToggle.onclick = function() {
+            var themeLink = document.getElementById('theme-style');
+            if (isDark) {
+                themeLink.href = '/assets/styles/light-theme.css';
+                themeIcon.textContent = '☀️';
+                this.ariaLabel = 'Switch to Dark Theme';
+                this.title = 'Switch to Dark Theme';
+            } else {
+                themeLink.href = '/assets/styles/dark-theme.css';
+                themeIcon.textContent = '🌙';
+                this.ariaLabel = 'Switch to Light Theme';
+                this.title = 'Switch to Light Theme';
+            }
+            isDark = !isDark;
+        };
+        // Keyboard accessibility for theme toggle
+        themeToggle.onkeyup = function(e) {
+            if (e.key === 'Enter' || e.key === ' ') this.onclick();
+        };
+        // Focus first tab on load
+        window.onload = function() {
+            document.getElementById('tab-scan').focus();
+        };
+    </script>
+    <script language="VBScript">
+    Sub StartScan
+        ' Example: Run the scan script and show status and output in the console tab
+        Dim WshShell, exec, line, output
+        Set WshShell = CreateObject("WScript.Shell")
+        Set exec = WshShell.Exec("cmd /c \"src\\scripts\\auto\\CleanupDownloads-SPH.ps1\"")
+        output = ""
+        document.getElementById("scan-status").innerText = "Scanning for SPH reports..."
+        Do While Not exec.StdOut.AtEndOfStream
+            line = exec.StdOut.ReadLine()
+            output = output & line & vbCrLf
+            document.getElementById("console-output").innerText = output
+        Loop
+        document.getElementById("scan-status").innerText = "Scan complete. See Console tab for details."
+        ShowTab("console")
+    End Sub
+    </script>
+</body>
+</html>
