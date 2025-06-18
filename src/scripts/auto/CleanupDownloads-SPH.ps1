@@ -1,8 +1,18 @@
 # Set the console title
 $host.ui.RawUI.WindowTitle = "Synxis Property Hub Reports Cleanup"
 
+param(
+    [switch]$NonInteractive = $false
+)
+
+Trap {
+    Write-Output "ERROR: $($_.Exception.Message)"
+    Continue
+}
+Write-Output "Script started"
+
 # Message to display at the top of the console
-Write-Host "Beginning search for Synxis Reports (PDF) remaining in the downloads folder. Please wait."
+Write-Output "Beginning search for Synxis Reports (PDF) remaining in the downloads folder. Please wait."
 
 # Search for files matching "sph*.pdf" recursively
 $searchPath = Join-Path $env:USERPROFILE 'Downloads'
@@ -10,10 +20,10 @@ $files = Get-ChildItem -Path $searchPath -Filter "sph*.pdf" -Recurse -ErrorActio
 $totalFiles = $files.Count
 
 if ($totalFiles -eq 0) {
-    Write-Host " "
-    Write-Host "No files found."
-    Write-Host " "
-    Read-Host -Prompt "Press Enter to exit"
+    Write-Output " "
+    Write-Output "No files found."
+    Write-Output " "
+    Write-Output "Script complete"
     exit
 }
 
@@ -29,48 +39,60 @@ foreach ($file in $files) {
 }
 
 # Display the list of files that match
-Write-Host " "
-Write-Host "Search completed for PDF files that begin with 'sph' in '$searchPath'..."
-Write-Host " "
-Write-Host "Located $totalFiles file(s)."
+Write-Output " "
+Write-Output "Search completed for PDF files that begin with 'sph' in '$searchPath'..."
+Write-Output " "
+Write-Output "Located $totalFiles file(s)."
 $totalSizeMB = [math]::Round(($files | Measure-Object -Property Length -Sum).Sum / 1MB, 2)
-Write-Host "Total File Size: $totalSizeMB MB"
-Write-Host " "
+Write-Output "Total File Size: $totalSizeMB MB"
+Write-Output " "
 
 # Warn if large number or size of files
 if ($totalFiles -gt 100 -or $totalSizeMB -gt 100) {
-    Write-Host "WARNING: You are about to delete a large number or size of files!"
-    Write-Host " "
-    $extraConfirm = Read-Host "Are you absolutely sure you want to continue? (Y/N)"
+    Write-Output "WARNING: You are about to delete a large number or size of files!"
+    Write-Output " "
+    if ($NonInteractive) {
+        $extraConfirm = 'Y'
+    } else {
+        $extraConfirm = Read-Host "Are you absolutely sure you want to continue? (Y/N)"
+    }
     if ($extraConfirm -ne 'Y' -and $extraConfirm -ne 'y') {
-        Write-Host "Operation cancelled by user."
-        Write-Host " "
-        Read-Host -Prompt "Press Enter to exit"
+        Write-Output "Operation cancelled by user."
+        Write-Output " "
+        Write-Output "Script complete"
         exit
     }
 }
 
-Write-Host "List of File(s) found:"
-$files | ForEach-Object { Write-Host $_.FullName }
+Write-Output "List of File(s) found:"
+$files | ForEach-Object { Write-Output $_.FullName }
 
 # Ask for confirmation
-Write-Host " "
-Write-Host "Please confirm cleanup."
-Write-Host "WARNING: This action cannot be undone. Files will be permanently deleted."
-Write-Host " "
-$confirmation = Read-Host "Would you like to delete the above-listed files? (Y/N)"
+Write-Output " "
+Write-Output "Please confirm cleanup."
+Write-Output "WARNING: This action cannot be undone. Files will be permanently deleted."
+Write-Output " "
+if ($NonInteractive) {
+    $confirmation = 'Y'
+} else {
+    $confirmation = Read-Host "Would you like to delete the above-listed files? (Y/N)"
+}
 
 # Offer to move to Recycle Bin instead of permanent delete
-Write-Host " "
+Write-Output " "
 $recycleOption = $false
 if ($confirmation -eq 'Y' -or $confirmation -eq 'y') {
-    Write-Host "Would you like to move the files to the Recycle Bin instead of permanently deleting them? (Y/N)"
-    $recycleResponse = Read-Host "Move to Recycle Bin? (Y/N)"
+    Write-Output "Would you like to move the files to the Recycle Bin instead of permanently deleting them? (Y/N)"
+    if ($NonInteractive) {
+        $recycleResponse = 'N'
+    } else {
+        $recycleResponse = Read-Host "Move to Recycle Bin? (Y/N)"
+    }
     if ($recycleResponse -eq 'Y' -or $recycleResponse -eq 'y') {
         $recycleOption = $true
         # Ensure Recycle module is available
         if (-not (Get-Module -ListAvailable -Name Recycle)) {
-            Write-Host "Installing 'Recycle' module for Recycle Bin support..."
+            Write-Output "Installing 'Recycle' module for Recycle Bin support..."
             Install-Module -Name Recycle -Scope CurrentUser -Force
         }
         Import-Module Recycle
@@ -93,22 +115,22 @@ if ($confirmation -eq 'Y' -or $confirmation -eq 'y') {
             $deleted++
         } catch {
             $failedFiles += $file.FullName
-            Write-Host "Failed to delete: $($file.FullName) ($_)."
+            Write-Output "Failed to delete: $($file.FullName) ($_)."
         }
     }
     $deletedSizeMB = [math]::Round($deletedSize / 1MB, 2)
-    Write-Host " "
+    Write-Output " "
     if ($failedFiles.Count -eq 0) {
-        Write-Host "User accepted. Files deleted successfully."
+        Write-Output "User accepted. Files deleted successfully."
     } else {
-        Write-Host "User accepted. Some files could not be deleted:"
-        $failedFiles | ForEach-Object { Write-Host $_ }
-        Write-Host " "
-        Write-Host "Possible reasons: file is in use, access denied, or insufficient permissions."
+        Write-Output "User accepted. Some files could not be deleted:"
+        $failedFiles | ForEach-Object { Write-Output $_ }
+        Write-Output " "
+        Write-Output "Possible reasons: file is in use, access denied, or insufficient permissions."
     }
-    Write-Host "Files deleted: $deleted"
-    Write-Host "Cleaned Up: $deletedSizeMB MB"
-    Write-Host " "
+    Write-Output "Files deleted: $deleted"
+    Write-Output "Cleaned Up: $deletedSizeMB MB"
+    Write-Output " "
     # Optionally log deleted and failed files
     $logPath = Join-Path $searchPath "SPH_Cleanup_Log_$(Get-Date -Format 'yyyyMMdd_HHmmss').txt"
     $logContent = @()
@@ -120,13 +142,13 @@ if ($confirmation -eq 'Y' -or $confirmation -eq 'y') {
         $logContent += $failedFiles
     }
     $logContent | Out-File -FilePath $logPath -Encoding UTF8
-    Write-Host "Log saved to: $logPath"
-    Write-Host " "
-    Read-Host -Prompt "Press Enter to exit"
+    Write-Output "Log saved to: $logPath"
+    Write-Output " "
 } else {
-    Write-Host "User declined. No files were deleted."
-    Write-Host "Files deleted: 0"
-    Write-Host "Cleaned Up: 0 MB. Space remaining to be cleaned: $totalSizeMB MB"
-    Write-Host " "
-    Read-Host -Prompt "Press Enter to exit"
+    Write-Output "User declined. No files were deleted."
+    Write-Output "Files deleted: 0"
+    Write-Output "Cleaned Up: 0 MB. Space remaining to be cleaned: $totalSizeMB MB"
+    Write-Output " "
 }
+
+Write-Output "Script complete"

@@ -1,16 +1,16 @@
 <!-- Ghost Hackers Brand -->
 <p align="center">
-  <img src="assets/images/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
+  <img src="assets/images/logo/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
   <span style="font-size:2.2em; font-weight:bold; vertical-align:middle; margin-left: 0.5em; color:#1aff66;">Ghost Hackers</span>
 </p>
 
-> # <p align="center">[Contributing Guidelines](/CONTRIBUTING.md)</p>
+> # <p align="center">[Contributing Guidelines](CONTRIBUTING.md)</p>
 
 <div align="justify">
 
   Thank you for considering contributing to the [SPH Report Cleanup](https://github.com/ghost-hackers/sph-report-cleanup) project! Whether it's reporting a bug, suggesting an enhancement, or actively contributing code, we appreciate your efforts in making this project better.
 
-  Before you start contributing, please take a moment to review our [Code of Conduct](/CODE_OF_CONDUCT.md) to understand our expectations for respectful and inclusive participation.
+  Before you start contributing, please take a moment to review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand our expectations for respectful and inclusive participation.
 
 </div>
 
@@ -87,7 +87,7 @@
 
 <div align="justify">
 
-  By participating in this project, you affirm your commitment to our [Code of Conduct](/CODE_OF_CONDUCT.md) and to upholding a culture of inclusivity, professionalism, and mutual respect. We are dedicated to providing a safe, harassment-free environment for all contributors, regardless of background or experience. Any form of discrimination, harassment, or exclusionary behavior will not be tolerated and may result in removal from the project.
+  By participating in this project, you affirm your commitment to our [Code of Conduct](CODE_OF_CONDUCT.md) and to upholding a culture of inclusivity, professionalism, and mutual respect. We are dedicated to providing a safe, harassment-free environment for all contributors, regardless of background or experience. Any form of discrimination, harassment, or exclusionary behavior will not be tolerated and may result in removal from the project.
 
 </div>
 

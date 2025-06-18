@@ -1,6 +1,6 @@
 <!-- Ghost Hackers Brand -->
 <p align="center">
-  <img src="assets/images/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
+  <img src="assets/images/logo/ghost_hackers_logo.png" alt="Ghost Hackers Brand Logo" width="60" style="vertical-align:middle;"/>
   <span style="font-size:2.2em; font-weight:bold; vertical-align:middle; margin-left: 0.5em; color:#1aff66;">Ghost Hackers</span>
 </p>
 

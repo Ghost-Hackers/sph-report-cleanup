@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>SPH Report Cleanup - Continue</title>
+    <hta:application id="oContinue" applicationname="SPHContinue" border="dialog" innerborder="no" icon="../assets/icons/favicon.ico"/>
+    <script type="text/javascript">
+        window.onload = function() {
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var shell = new ActiveXObject("WScript.Shell");
+            var displayInfoPath = fso.GetAbsolutePathName("DisplayInfo.hta");
+            shell.Run('"' + displayInfoPath + '"', 1, false);
+            window.close();
+        };
+    </script>
+    <style>body { background: #fff; color: #222; font-family: Arial, sans-serif; text-align: center; padding: 2em; }</style>
+</head>
+<body>
+    <h2>Launching main application...</h2>
+    <p>If nothing happens, please run <strong>DisplayInfo.hta</strong> manually.</p>
+</body>
+</html>

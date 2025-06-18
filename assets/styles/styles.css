@@ -25,3 +25,30 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+
+.buttons button, .tab-btn, .button-container button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(45,123,229,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+    cursor: pointer;
+    outline: none;
+    margin: 0.3em 0.7em;
+    letter-spacing: 0.03em;
+}
+.buttons button:active, .tab-btn:active, .button-container button:active {
+    transform: translateY(1px) scale(0.98);
+}
+.buttons button:hover, .tab-btn:hover, .button-container button:hover,
+.buttons button:focus, .tab-btn:focus, .button-container button:focus {
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Light theme button override for better contrast */
+body.light-mode .buttons button, body.light-mode .tab-btn, body.light-mode .button-container button {
+    color: #1a365d !important;
+    text-shadow: 0 1px 2px #fff8, 0 0 2px #e0e0e0;
+}

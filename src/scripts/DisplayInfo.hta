@@ -2,28 +2,33 @@
 <head>
     <title>SPH Report Cleanup - Main</title>
     <hta:application id="oDisplayInfo" applicationname="SPHReportCleanupDisplayInfo" border="dialog" innerborder="no" icon="/assets/icons/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
-    <link rel="stylesheet" type="text/css" id="theme-style" href="/assets/styles/dark-theme.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/styles/styles.css">
+    <link rel="stylesheet" type="text/css" id="theme-style" href="../../assets/styles/dark-theme.css">
     <link rel="icon" type="image/png" href="/assets/icons/favicon.ico">
     <script language="VBScript" src="/src/scripts/scripts.vbs"></script>
 </head>
 <body>
     <div class="container">
+        <div style="position:absolute;top:1em;right:1.5em;z-index:10;">
+            <button id="theme-toggle" aria-label="Switch to Light Theme" style="font-size:2.2em;padding:0.2em 0.5em;background:none;border:none;cursor:pointer;" title="Switch to Light Theme">
+                <span id="theme-icon"><img src="assets/images/logo/moon.svg" alt="Dark Theme" style="width:2em;height:2em;vertical-align:middle;"></span>
+            </button>
+        </div>
         <h1>SPH Report Cleanup</h1>
         <div class="buttons" style="margin-bottom:1.5em;">
             <button class="tab-btn" onclick="ShowTab('scan')" aria-label="Scan" id="tab-scan">Scan</button>
             <button class="tab-btn" onclick="ShowTab('console')" aria-label="Console" id="tab-console">Console</button>
             <button class="tab-btn" onclick="ShowTab('logs')" aria-label="Logs" id="tab-logs">Logs</button>
             <button class="tab-btn" onclick="ShowTab('settings')" aria-label="Settings" id="tab-settings">Settings</button>
-            <button id="theme-toggle" aria-label="Switch to Light Theme" style="margin-left:1em;font-size:1.2em;" title="Switch to Light Theme"><span id="theme-icon">🌙</span></button>
         </div>
         <div id="scan" class="tabcontent">
             <h2>Scan for SPH Reports</h2>
             <button onclick="StartScan()" aria-label="Start Scan" id="scan-btn">Start Scan</button>
             <div id="scan-status" style="margin-top:1em;"></div>
         </div>
-        <div id="console" class="tabcontent" style="display:none;">
+        <div id="console" class="tabcontent" style="display:none; position:relative;">
             <h2>Script Console</h2>
+            <button id="copy-console-btn" style="position:absolute;top:0.5em;right:0.5em;z-index:2;font-size:1em;padding:0.3em 0.8em;cursor:pointer;">Copy</button>
             <pre id="console-output" style="width:100%;height:300px;background:#181a1b;color:#f5f5f5;font-family:monospace;border-radius:6px;padding:10px;overflow:auto;margin-top:1em;"></pre>
         </div>
         <div id="logs" class="tabcontent" style="display:none;">
@@ -52,50 +57,169 @@
             if(tab==='logs') document.getElementById('tab-logs').focus();
             if(tab==='settings') document.getElementById('tab-settings').focus();
         }
-        // Theme toggle logic with icon
+        // Theme toggle logic with SVG icon
         var isDark = true;
-        var themeToggle = document.getElementById('theme-toggle');
-        var themeIcon = document.getElementById('theme-icon');
-        themeToggle.onclick = function() {
-            var themeLink = document.getElementById('theme-style');
-            if (isDark) {
-                themeLink.href = '/assets/styles/light-theme.css';
-                themeIcon.textContent = '☀️';
-                this.ariaLabel = 'Switch to Dark Theme';
-                this.title = 'Switch to Dark Theme';
-            } else {
-                themeLink.href = '/assets/styles/dark-theme.css';
-                themeIcon.textContent = '🌙';
-                this.ariaLabel = 'Switch to Light Theme';
-                this.title = 'Switch to Light Theme';
-            }
-            isDark = !isDark;
-        };
-        // Keyboard accessibility for theme toggle
-        themeToggle.onkeyup = function(e) {
-            if (e.key === 'Enter' || e.key === ' ') this.onclick();
-        };
-        // Focus first tab on load
         window.onload = function() {
             document.getElementById('tab-scan').focus();
+            var themeToggle = document.getElementById('theme-toggle');
+            var themeIcon = document.getElementById('theme-icon');
+            if (themeToggle && themeIcon) {
+                themeToggle.onclick = function() {
+                    var themeLink = document.getElementById('theme-style');
+                    var body = document.body;
+                    if (isDark) {
+                        themeLink.setAttribute('href', '../../assets/styles/light-theme.css?' + new Date().getTime());
+                        themeIcon.innerHTML = '<img src="assets/images/logo/sun.svg" alt="Light Theme" style="width:2em;height:2em;vertical-align:middle;">';
+                        this.ariaLabel = 'Switch to Dark Theme';
+                        this.title = 'Switch to Dark Theme';
+                        if (body && body.classList) body.classList.add('light-mode');
+                    } else {
+                        themeLink.setAttribute('href', '../../assets/styles/dark-theme.css?' + new Date().getTime());
+                        themeIcon.innerHTML = '<img src="assets/images/logo/moon.svg" alt="Dark Theme" style="width:2em;height:2em;vertical-align:middle;">';
+                        this.ariaLabel = 'Switch to Light Theme';
+                        this.title = 'Switch to Light Theme';
+                        if (body && body.classList) body.classList.remove('light-mode');
+                    }
+                    isDark = !isDark;
+                };
+                themeToggle.onkeyup = function(e) {
+                    if (e && (e.key === 'Enter' || e.key === ' ')) this.onclick();
+                };
+            }
         };
+        // Cleanup subroutine
+        function CleanupOnExit() {
+            try {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var tempFile = fso.GetAbsolutePathName("temp/sph_scan_output.txt");
+                if (fso.FileExists(tempFile)) {
+                    fso.DeleteFile(tempFile, true);
+                }
+                // Optionally, stop any running PowerShell processes started by this app
+                var shell = new ActiveXObject("WScript.Shell");
+                shell.Run("powershell -Command \"Get-Process -Name powershell -ErrorAction SilentlyContinue | Where-Object { $_.StartInfo.Arguments -like '*CleanupDownloads-SPH.ps1*' } | Stop-Process -Force\"", 0, false);
+            } catch (e) {
+                // Ignore errors in cleanup
+            }
+        }
+        // Attach cleanup to window unload event
+        window.onunload = CleanupOnExit;
     </script>
     <script language="VBScript">
     Sub StartScan
-        ' Example: Run the scan script and show status and output in the console tab
-        Dim WshShell, exec, line, output
+        ' Debug: Test if PowerShell can write to the temp file
+        Dim WshShell, fso, scriptPath, tempFile, cmd, exec, output, line, testCmd
         Set WshShell = CreateObject("WScript.Shell")
-        Set exec = WshShell.Exec("cmd /c \"src\\scripts\\auto\\CleanupDownloads-SPH.ps1\"")
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        scriptPath = fso.GetAbsolutePathName("auto/CleanupDownloads-SPH.ps1")
+        ' Ensure the temp directory exists
+        Dim tempDir
+        tempDir = fso.GetParentFolderName(fso.GetAbsolutePathName("temp/sph_scan_output.txt"))
+        If Not fso.FolderExists(tempDir) Then
+            fso.CreateFolder tempDir
+        End If
+        tempFile = fso.GetAbsolutePathName("temp/sph_scan_output.txt")
+        ' Ensure the error log directory exists (recursively)
+        Dim errorLogFile, errorLogDir
+        errorLogFile = fso.GetAbsolutePathName("../../logs/errors/sph_ps_error.txt")
+        errorLogDir = fso.GetParentFolderName(errorLogFile)
+        EnsureParentFoldersExist(errorLogDir)
+        ' Test PowerShell output with ASCII encoding and cmd.exe wrapper
+        testCmd = "cmd.exe /c powershell -Command ""'Test OK' | Out-File -FilePath '""" & tempFile & """' -Encoding ASCII 2>&1"""
+        Dim testExitCode
+        testExitCode = WshShell.Run(testCmd, 0, True)
+        Dim testOutput
+        testOutput = ""
+        If fso.FileExists(tempFile) Then
+            Dim tsTest
+            Set tsTest = fso.OpenTextFile(tempFile, 1)
+            Do While Not tsTest.AtEndOfStream
+                line = tsTest.ReadLine
+                testOutput = testOutput & line & vbCrLf
+            Loop
+            tsTest.Close
+            fso.DeleteFile tempFile
+        End If
+        ' Show test result, command, and exit code in the console
+        Dim errorMsg
+        errorMsg = ""
+        ' Try to read error output if the temp file was not created
+        If testExitCode <> 0 Then
+            errorMsg = "PowerShell test command failed. Try running this command manually in PowerShell to see the error message:" & vbCrLf & testCmd & vbCrLf
+        End If
+        Dim debugInfo
+        debugInfo = "PowerShell test output: " & testOutput & vbCrLf
+        debugInfo = debugInfo & "Test command: " & testCmd & vbCrLf
+        debugInfo = debugInfo & "Test exit code: " & testExitCode & vbCrLf
+        debugInfo = debugInfo & "Script command: " & cmd & vbCrLf
+        debugInfo = debugInfo & "Temp file: " & tempFile & vbCrLf
+        document.getElementById("console-output").innerText = errorMsg & output & vbCrLf & debugInfo
+        If InStr(testOutput, "Test OK") = 0 Then
+            document.getElementById("scan-status").innerText = "PowerShell did not run or could not write output."
+            ShowTab("console")
+            Exit Sub
+        End If
+        ' If test passed, run the real script with output and error redirection
+        cmd = "cmd.exe /c powershell -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File """ & scriptPath & """ -NonInteractive > """ & tempFile & """ 2> """ & errorLogFile & """"
+        WshShell.Run cmd, 0, True
         output = ""
-        document.getElementById("scan-status").innerText = "Scanning for SPH reports..."
-        Do While Not exec.StdOut.AtEndOfStream
-            line = exec.StdOut.ReadLine()
-            output = output & line & vbCrLf
-            document.getElementById("console-output").innerText = output
-        Loop
+        If fso.FileExists(tempFile) Then
+            Dim ts
+            Set ts = fso.OpenTextFile(tempFile, 1)
+            Do While Not ts.AtEndOfStream
+                line = ts.ReadLine
+                output = output & line & vbCrLf
+            Loop
+            ts.Close
+            fso.DeleteFile tempFile
+        Else
+            output = "No output file found. Script may not have run."
+        End If
         document.getElementById("scan-status").innerText = "Scan complete. See Console tab for details."
+        ' Only set console output once, with both script output and debug info
+        debugInfo = "PowerShell test output: " & testOutput & vbCrLf
+        debugInfo = debugInfo & "Test command: " & testCmd & vbCrLf
+        debugInfo = debugInfo & "Test exit code: " & testExitCode & vbCrLf
+        debugInfo = debugInfo & "Script command: " & cmd & vbCrLf
+        debugInfo = debugInfo & "Temp file: " & tempFile & vbCrLf
+        document.getElementById("console-output").innerText = output & vbCrLf & debugInfo
         ShowTab("console")
     End Sub
+
+    ' Helper to ensure all parent directories exist
+    Sub EnsureParentFoldersExist(folderPath)
+        Dim fso, parent
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        parent = fso.GetParentFolderName(folderPath)
+        If Not fso.FolderExists(parent) Then
+            EnsureParentFoldersExist(parent)
+            fso.CreateFolder parent
+        End If
+    End Sub
+    </script>
+    <script type="text/javascript">
+        // Add copy-to-clipboard functionality for the console
+        var copyBtn = document.getElementById('copy-console-btn');
+        if (copyBtn) {
+            copyBtn.onclick = function() {
+                var text = document.getElementById('console-output').innerText;
+                if (window.clipboardData) {
+                    window.clipboardData.setData('Text', text);
+                } else if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text);
+                } else {
+                    // fallback for older browsers
+                    var textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+                copyBtn.textContent = 'Copied!';
+                setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 1200);
+            };
+        }
     </script>
 </body>
 </html>

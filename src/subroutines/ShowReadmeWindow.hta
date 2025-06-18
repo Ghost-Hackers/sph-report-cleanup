@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>SPH Report Cleanup - Docs</title>
+    <hta:application id="oReadme" applicationname="SPHReadme" border="dialog" innerborder="no" icon="../assets/icons/favicon.ico"/>
+    <script language="VBScript">
+    Function GetQueryStringParam(name)
+        Dim params, i, pair, key, value
+        params = Split(Mid(window.location.search, 2), "&")
+        For i = 0 To UBound(params)
+            pair = Split(params(i), "=")
+            If UBound(pair) = 1 Then
+                key = pair(0)
+                value = pair(1)
+                If LCase(key) = LCase(name) Then
+                    GetQueryStringParam = value
+                    Exit Function
+                End If
+            End If
+        Next
+        GetQueryStringParam = ""
+    End Function
+    Sub Window_OnLoad
+        Dim shell, scriptPath, mdfile
+        Set shell = CreateObject("WScript.Shell")
+        mdfile = GetQueryStringParam("mdfile")
+        If mdfile <> "" Then
+            scriptPath = "powershell -ExecutionPolicy Bypass -File ""../scripts/auto/view-readme.ps1"" """ & mdfile & """"
+        Else
+            scriptPath = "powershell -ExecutionPolicy Bypass -File ""../scripts/auto/view-readme.ps1"""
+        End If
+        shell.Run scriptPath, 1, False
+        window.close
+    End Sub
+    </script>
+    <style>
+        body { background: #f6f8fa; margin: 0; padding: 0; }
+        .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 2em auto; padding: 2em; background: #fff; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body>
+    <article class="markdown-body">
+        <h2>Launching documentation viewer...</h2>
+        <p>The viewer will let you instantly switch between <strong>README</strong>, <strong>CONTRIBUTING</strong>, and <strong>LICENSE</strong> in your browser.</p>
+        <p>If nothing happens, run <strong>src/scripts/auto/view-readme.ps1</strong> manually.</p>
+    </article>
+</body>
+</html>

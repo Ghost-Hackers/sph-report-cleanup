@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>SPH Report Cleanup - Report Issue</title>
+    <hta:application id="oReportIssue" applicationname="SPHReportIssue" border="dialog" innerborder="no" icon="../assets/icons/favicon.ico"/>
+    <script language="VBScript">
+    Sub Window_OnLoad
+        Dim shell, url
+        url = "https://github.com/Ghost-Hackers/sph-report-cleanup/issues/new?template=bug_report.md"
+        Set shell = CreateObject("WScript.Shell")
+        shell.Run url, 1, False
+        window.close
+    End Sub
+    </script>
+    <style>body { background: #fff; color: #222; font-family: Arial, sans-serif; text-align: center; padding: 2em; }</style>
+</head>
+<body>
+    <h2>Redirecting to GitHub Issues...</h2>
+    <p>If nothing happens, <a href="https://github.com/Ghost-Hackers/sph-report-cleanup/issues/new?template=bug_report.md" target="_blank">click here to report an issue</a>.</p>
+</body>
+</html>

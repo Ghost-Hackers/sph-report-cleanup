@@ -1,10 +1,10 @@
 /* Light Theme */
 body {
-    background-color: #f7f9fa;
-    color: #222;
+    background-color: #f7f9fa !important;
+    color: #222 !important;
 }
 .container {
-    background: #fff;
+    background: #fff !important;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     border-radius: 12px;
 }
@@ -14,12 +14,25 @@ h1, h2 {
 hr {
     border-top: 1px solid #e0e0e0;
 }
-.buttons button {
-    background: linear-gradient(90deg, #2d7be5 0%, #5ec6fa 100%);
-    color: #fff;
+.buttons button, .tab-btn, .button-container button {
+    background: linear-gradient(90deg, #e3f0fc 0%, #cbe5fa 100%);
+    color: #1a365d;
+    border: 2px solid #2d7be5;
+    text-shadow: 0 1px 2px #fff8, 0 0 2px #e0e0e0;
 }
-.buttons button:hover, .buttons button:focus {
-    background: linear-gradient(90deg, #1a5bb8 0%, #3eaeea 100%);
+.buttons button:hover, .tab-btn:hover, .button-container button:hover,
+.buttons button:focus, .tab-btn:focus, .button-container button:focus {
+    background: linear-gradient(90deg, #e3f7fa 0%, #5ec6fa 100%);
+    color: #174a8c;
+    border: 2px solid #2d7be5;
+    box-shadow: 0 0 0 4px #2d7be544, 0 2px 16px #5ec6fa33;
+    outline: none;
+    transition: box-shadow 0.2s, background 0.2s, border-color 0.2s;
+}
+.buttons button:active, .tab-btn:active, .button-container button:active {
+    background: linear-gradient(90deg, #a0c4e8 0%, #2d7be5 100%);
+    color: #174a8c;
+    border-color: #174a8c;
 }
 .version {
     color: #888;
