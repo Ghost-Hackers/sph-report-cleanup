@@ -1,0 +1,24 @@
+{
+  "name": "sph-report-cleanup",
+  "version": "1.0.0",
+  "description": "A modern Windows utility for searching and cleaning up Synxis Property Hub (SPH) PDF reports from your Downloads folder. Features a GUI built with HTA, PowerShell, and HTML/CSS/JS.",
+  "author": "Ghost Hackers <https://github.com/Ghost-Hackers>",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ghost-Hackers/sph-report-cleanup.git"
+  },
+  "keywords": [
+    "SPH",
+    "Synxis Property Hub",
+    "PDF",
+    "cleanup",
+    "PowerShell",
+    "HTA",
+    "Windows",
+    "utility",
+    "GUI"
+  ],
+  "scripts": {},
+  "dependencies": {}
+}
