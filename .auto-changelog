@@ -1,0 +1,29 @@
+title = Changelog
+output = CHANGELOG.md
+template = keepachangelog
+unreleased = true
+commitLimit = false
+backfillLimit = false
+hideEmptyReleases = true
+releaseSummary = true
+breakingPattern = BREAKING CHANGE
+issuePattern = #([0-9]+)
+issueUrl = https://github.com/Ghost-Hackers/sph-report-cleanup/issues/{id}
+tagPattern = v[0-9]+.[0-9]+.[0-9]+
+prPattern = \(#([0-9]+)\)
+prUrl = https://github.com/Ghost-Hackers/sph-report-cleanup/pull/{id}
+author = true
+
+commitGroups = [
+  { title = "✨ Features", pattern = "^feat" },
+  { title = "🐛 Bug Fixes", pattern = "^fix" },
+  { title = "📝 Documentation", pattern = "^docs" },
+  { title = "🔨 Refactoring", pattern = "^refactor" },
+  { title = "💄 Style", pattern = "^style" },
+  { title = "✅ Tests", pattern = "^test" },
+  { title = "⚙️ CI", pattern = "^ci" },
+  { title = "📦 Build", pattern = "^build" },
+  { title = "⚡ Performance", pattern = "^perf" },
+  { title = "⏪ Revert", pattern = "^revert" },
+  { title = "🛠 Maintenance", pattern = "^chore" }
+]
